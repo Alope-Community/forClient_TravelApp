@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/utils/constant.dart';
 
 class SearchInput extends StatelessWidget {
   const SearchInput({super.key});
@@ -54,19 +55,20 @@ class SearchInput extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            height: 45,
+            height: 50,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Color(0xFFA6752E)),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: AppColors.primary, width: 2),
             ),
             child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 12),
               child: TextField(
+                style: AppTextStyles.body,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Search",
-                  icon: Icon(Icons.search, color: Color(0xFFA6752E)),
+                  icon: Icon(Icons.search, color: AppColors.primary),
                 ),
               ),
             ),
@@ -80,10 +82,10 @@ class SearchInput extends StatelessWidget {
             width: 45,
             decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(color: Color(0xFFA6752E)),
-              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.primary, width: 2),
+              borderRadius: BorderRadius.circular(8),
             ),
-            child: const Icon(Icons.tune, color: Color(0xFFA6752E)),
+            child: const Icon(Icons.tune, color: AppColors.primary),
           ),
         ),
       ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/home/CategoryFilter.dart';
-import 'package:forclient_travelapp/widgets/home/SearchBanner.dart';
+import '../widgets/home/category_filter.dart';
+import '../widgets/home/banner.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -12,9 +12,8 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: const [
           SearchBanner(),
-          SizedBox(height: 16), // Jarak antara banner dan kategori
+          SizedBox(height: 16),
           CategoryFilter(),
-          // Tambahkan komponen lainnya di bawah sini
         ],
       ),
     );
