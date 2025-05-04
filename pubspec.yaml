@@ -61,6 +61,8 @@ flutter:
   assets:
     - assets/images/banner.jpg
     - assets/images/bank_indonesia.jpg
+    - assets/images/borubudur.jpg
+    - assets/images/pantai-selatan.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -24,21 +24,21 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: [
                 Trendingcard(
-                  imageUrl: 'assets/pantai-selatan.jpg',
+                  imageUrl: 'assets/images/pantai-selatan.jpg',
                   title: 'Pantai Selatan',
                   rating: '4.8',
                   kategori: 'Alam',
                   price: 'Rp.30.000 - Rp.50.000',
                 ),
                 Trendingcard(
-                  imageUrl: 'assets/malioboro.jpg',
+                  imageUrl: 'assets/images/banner.jpg',
                   title: 'Malioboro',
                   rating: '4.7',
                   kategori: 'Perkotaan',
                   price: 'Rp.50.000 - Rp.100.000',
                 ),
                 Trendingcard(
-                  imageUrl: 'assets/borubudur.jpg',
+                  imageUrl: 'assets/images/borubudur.jpg',
                   title: 'Candi Borobudur',
                   rating: '4.6',
                   kategori: 'Sejarah',
