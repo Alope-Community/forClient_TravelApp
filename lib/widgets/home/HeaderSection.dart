@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 class HeaderSection extends StatelessWidget {
   final String title;
   final String seeAll;
-  final Color? color; // Warna teks judul
-  final Color? seeAllColor; // Warna teks "See All"
   final void Function()? onSeeAllPressed; 
   final void Function()? onTitlePressed;
 
@@ -14,8 +12,6 @@ class HeaderSection extends StatelessWidget {
     this.onTitlePressed,
     required this.title,
     required this.seeAll,
-    this.color,
-    this.seeAllColor,
   }) : super(key: key);
 
   
@@ -31,7 +27,7 @@ class HeaderSection extends StatelessWidget {
               children: [
                 const Icon(
                   Icons.local_fire_department,
-                  color: Colors.redAccent,
+                  color: Colors.black,
                 ),
                 const SizedBox(width: 2), // Jarak antara icon dan teks
                 GestureDetector(
@@ -44,7 +40,7 @@ class HeaderSection extends StatelessWidget {
                       fontSize: 18,
                       fontFamily: 'kanit',
                       fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
+                      color: Colors.black,
                     ),
                   ),
                 ),

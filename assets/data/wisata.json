@@ -1,0 +1,1090 @@
+[
+    {
+        "id": 1,
+        "nama": "Keraton Yogyakarta",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Istana/Keraton",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Solo Traveler",
+            "Fotografer"
+        ],
+        "lokasi": "Jl. Rotowijayan Blok No. 1, Panembahan, Kraton, Yogyakarta"
+    },
+    {
+        "id": 2,
+        "nama": "Taman Sari",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Istana/Keraton",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Jl. Taman, Kraton, Yogyakarta"
+    },
+    {
+        "id": 3,
+        "nama": "Candi Prambanan",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Jl. Raya Solo - Yogyakarta No.16, Prambanan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 4,
+        "nama": "Pantai Parangtritis",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Gratis",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Malam"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Parangtritis, Kretek, Bantul, Yogyakarta"
+    },
+    {
+        "id": 5,
+        "nama": "Goa Jomblang",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Jetis Wetan, Pacarejo, Semanu, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 6,
+        "nama": "Kebun Buah Mangunan",
+        "kategori": [
+            "Wisata Alam",
+            "Desa Wisata & Agrowisata"
+        ],
+        "subkategori": "Kebun Buah",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Fotografer"
+        ],
+        "lokasi": "Mangunan, Dlingo, Bantul, Yogyakarta"
+    },
+    {
+        "id": 7,
+        "nama": "Museum Ullen Sentalu",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Museum",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Boyong Km 25, Kaliurang Barat, Sleman, Yogyakarta"
+    },
+    {
+        "id": 8,
+        "nama": "Tebing Breksi",
+        "kategori": [
+            "Wisata Alam",
+            "Gunung & Pegunungan"
+        ],
+        "subkategori": "Pemandangan",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Malam"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Sambirejo, Prambanan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 9,
+        "nama": "Taman Pintar",
+        "kategori": [
+            "Wisata Kota",
+            "Keluarga & Hiburan"
+        ],
+        "subkategori": "Taman Kota",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum",
+            "Ramah Disabilitas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Panembahan Senopati No.1-3, Yogyakarta"
+    },
+    {
+        "id": 10,
+        "nama": "Jogja Bay Waterpark",
+        "kategori": [
+            "Wisata Kota",
+            "Keluarga & Hiburan"
+        ],
+        "subkategori": "Playground",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga"
+        ],
+        "lokasi": "Jl. Utara Stadion, Maguwoharjo, Depok, Sleman, Yogyakarta"
+    },
+    {
+        "id": 11,
+        "nama": "Candi Borobudur",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Borobudur, Magelang, Jawa Tengah"
+    },
+    {
+        "id": 12,
+        "nama": "Malioboro",
+        "kategori": [
+            "Wisata Kota",
+            "Belanja & Kuliner"
+        ],
+        "subkategori": "Jalan Utama",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Transportasi Umum",
+            "Ramah Disabilitas"
+        ],
+        "waktu_kunjungan": [
+            "Siang",
+            "Malam"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Malioboro, Yogyakarta"
+    },
+    {
+        "id": 13,
+        "nama": "Alun-Alun Kidul",
+        "kategori": [
+            "Wisata Kota",
+            "Keluarga & Hiburan"
+        ],
+        "subkategori": "Alun-Alun",
+        "budget": "Gratis",
+        "aksesibilitas": [
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Malam"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Alun-Alun Kidul, Yogyakarta"
+    },
+    {
+        "id": 14,
+        "nama": "Goa Pindul",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Bejiharjo, Karangmojo, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 15,
+        "nama": "Pantai Timang",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 16,
+        "nama": "Museum Sonobudoyo",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Museum",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Pangurakan No.6, Yogyakarta"
+    },
+    {
+        "id": 17,
+        "nama": "Kaliurang",
+        "kategori": [
+            "Wisata Alam",
+            "Gunung & Pegunungan"
+        ],
+        "subkategori": "Pemandangan",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Kaliurang, Sleman, Yogyakarta"
+    },
+    {
+        "id": 18,
+        "nama": "Candi Ratu Boko",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Bokoharjo, Prambanan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 19,
+        "nama": "Pantai Indrayanti",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Tepus, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 20,
+        "nama": "Kebun Binatang Gembira Loka",
+        "kategori": [
+            "Wisata Kota",
+            "Keluarga & Hiburan"
+        ],
+        "subkategori": "Kebun Binatang",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas",
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga"
+        ],
+        "lokasi": "Jl. Kebun Raya No.2, Yogyakarta"
+    },
+    {
+        "id": 21,
+        "nama": "Puncak Becici",
+        "kategori": [
+            "Wisata Alam",
+            "Gunung & Pegunungan"
+        ],
+        "subkategori": "Pemandangan",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 22,
+        "nama": "Museum Affandi",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Museum",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Solo Traveler",
+            "Fotografer"
+        ],
+        "lokasi": "Jl. Laksda Adisucipto No.167, Yogyakarta"
+    },
+    {
+        "id": 23,
+        "nama": "Air Terjun Sri Gethuk",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Air Terjun",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Widoro, Ngestiharjo, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 24,
+        "nama": "Pantai Krakal",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Krakal, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 25,
+        "nama": "Benteng Vredeburg",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Museum",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Margo Mulyo No.6, Yogyakarta"
+    },
+    {
+        "id": 26,
+        "nama": "Bukit Bintang",
+        "kategori": [
+            "Wisata Alam",
+            "Gunung & Pegunungan"
+        ],
+        "subkategori": "Pemandangan",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Sore",
+            "Malam"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 27,
+        "nama": "Goa Selarong",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Girimulyo, Dukun, Bantul, Yogyakarta"
+    },
+    {
+        "id": 28,
+        "nama": "Pantai Siung",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 29,
+        "nama": "Museum Batik Yogyakarta",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Museum",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Transportasi Umum"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Dr. Sutomo No.13, Yogyakarta"
+    },
+    {
+        "id": 30,
+        "nama": "Puncak Suroloyo",
+        "kategori": [
+            "Wisata Alam",
+            "Gunung & Pegunungan"
+        ],
+        "subkategori": "Pemandangan",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Kulon Progo, Yogyakarta"
+    },
+    {
+        "id": 31,
+        "nama": "Pantai Wediombo",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 32,
+        "nama": "Candi Ijo",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Candi Ijo, Sleman, Yogyakarta"
+    },
+    {
+        "id": 33,
+        "nama": "Pantai Glagah",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Kulon Progo, Yogyakarta"
+    },
+    {
+        "id": 34,
+        "nama": "Goa Kiskendo",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Kulon Progo, Yogyakarta"
+    },
+    {
+        "id": 35,
+        "nama": "Museum Dirgantara",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Museum",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Solo Traveler"
+        ],
+        "lokasi": "Jl. Kolonel Sugiyono, Yogyakarta"
+    },
+    {
+        "id": 36,
+        "nama": "Pantai Baron",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 37,
+        "nama": "Candi Sambisari",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Purwomartani, Kalasan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 38,
+        "nama": "Pantai Drini",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 39,
+        "nama": "Goa Jatijajar",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Kebumen, Jawa Tengah"
+    },
+    {
+        "id": 40,
+        "nama": "Pantai Sundak",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 41,
+        "nama": "Candi Plaosan",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Prambanan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 42,
+        "nama": "Pantai Pok Tunggal",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 43,
+        "nama": "Goa Pindul",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.50.000 - Rp.150.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Bejiharjo, Karangmojo, Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 44,
+        "nama": "Pantai Ngobaran",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 45,
+        "nama": "Candi Kalasan",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Kalasan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 46,
+        "nama": "Pantai Ngrenehan",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 47,
+        "nama": "Goa Selokarang",
+        "kategori": [
+            "Wisata Alam",
+            "Goa & Air Terjun"
+        ],
+        "subkategori": "Goa",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 48,
+        "nama": "Pantai Sadranan",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    },
+    {
+        "id": 49,
+        "nama": "Candi Sari",
+        "kategori": [
+            "Wisata Kota",
+            "Bersejarah & Budaya"
+        ],
+        "subkategori": "Situs Arkeologi",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi"
+        ],
+        "direkomendasikan_untuk": [
+            "Pasangan",
+            "Fotografer"
+        ],
+        "lokasi": "Kalasan, Sleman, Yogyakarta"
+    },
+    {
+        "id": 50,
+        "nama": "Pantai Sepanjang",
+        "kategori": [
+            "Wisata Alam",
+            "Pantai & Sungai"
+        ],
+        "subkategori": "Pantai Populer",
+        "budget": "Rp.20.000 - Rp.50.000",
+        "aksesibilitas": [
+            "Parkir Luas"
+        ],
+        "waktu_kunjungan": [
+            "Pagi",
+            "Sore"
+        ],
+        "direkomendasikan_untuk": [
+            "Keluarga",
+            "Pasangan"
+        ],
+        "lokasi": "Gunung Kidul, Yogyakarta"
+    }
+]
+

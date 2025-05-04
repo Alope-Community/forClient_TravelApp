@@ -8,7 +8,7 @@ class CategoryFilter extends StatefulWidget {
 }
 
 class _CategoryFilterState extends State<CategoryFilter> {
-  String selectedCategory = 'Perkotaan';
+  String selectedCategory = 'All';
 
   void selectCategory(String category) {
     setState(() {
@@ -36,6 +36,13 @@ class _CategoryFilterState extends State<CategoryFilter> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
+                _CategoryChip(
+                  icon: Icons.all_inclusive,
+                  label: 'All',
+                  selected: selectedCategory == 'All',
+                  onTap: () => selectCategory('All'),
+                ),
+                const SizedBox(width: 10),
                 _CategoryChip(
                   icon: Icons.location_city,
                   label: 'Perkotaan',
