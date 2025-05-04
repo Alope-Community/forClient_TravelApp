@@ -35,13 +35,13 @@ class SearchBanner extends StatelessWidget {
                   'Kemana Kamu\nIngin Pergi?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 35,
                     fontFamily: 'kanit',
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(height: 60), // Beri jarak agar tidak menabrak search bar
+                SizedBox(height: 60),
               ],
             ),
           ),

@@ -19,15 +19,19 @@ class _CategoryFilterState extends State<CategoryFilter> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
             'Kategori',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 18,
+                fontFamily: 'kanit',
+                color: Colors.black,
+                fontWeight: FontWeight.normal),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 5),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -53,7 +57,13 @@ class _CategoryFilterState extends State<CategoryFilter> {
                   onTap: () => selectCategory('Kuliner'),
                 ),
                 const SizedBox(width: 10),
-                // Tambahkan kategori lainnya jika perlu
+                _CategoryChip(
+                  icon: Icons.theater_comedy,
+                  label: 'Kesenian',
+                  selected: selectedCategory == 'Kesenian',
+                  onTap: () => selectCategory('Kesenian'),
+                ),
+                const SizedBox(width: 10),
               ],
             ),
           ),
@@ -110,7 +120,7 @@ class _CategoryChip extends StatelessWidget {
         ),
         shape: RoundedRectangleBorder(
           side: const BorderSide(color: Color(0xFFA6752E)),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(6),
         ),
       ),
     );
