@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/utils/constant.dart';
 
 class CategoryFilter extends StatefulWidget {
   const CategoryFilter({super.key});
@@ -26,12 +27,12 @@ class _CategoryFilterState extends State<CategoryFilter> {
           const Text(
             'Kategori',
             style: TextStyle(
-                fontSize: 18,
+                fontSize: AppTextSizes.heading2,
                 fontFamily: 'kanit',
                 color: Colors.black,
                 fontWeight: FontWeight.normal),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 12),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -95,39 +96,36 @@ class _CategoryChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
-      borderRadius: BorderRadius.all(Radius.circular(10)),
       child: Chip(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        backgroundColor: selected ? const Color(0xFFA6752E) : Colors.white,
+        backgroundColor: selected ? AppColors.primary : Colors.white,
         label: Row(
+          spacing: 10,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: selected ? Colors.white : const Color(0xFFA6752E)),
-            const SizedBox(width: 6),
+            Icon(icon, color: selected ? Colors.white : AppColors.primary),
             Container(
-              padding: const EdgeInsets.only(left: 8),
               decoration: BoxDecoration(
                 border: Border(
                   left: BorderSide(
-                    color: selected ? Colors.white : const Color(0xFFA6752E),
+                    color: selected ? Colors.white : AppColors.primary,
                     width: 2,
                   ),
                 ),
               ),
-              child: Text(
-                label,
-                style: TextStyle(
-                  color: selected ? Colors.white : const Color(0xFFA6752E),
-                ),
+            ),
+            Text(
+              label,
+              style: AppTextStyles.small.copyWith(
+                color: selected ? Colors.white : AppColors.primary,
               ),
             ),
           ],
         ),
-        shape: RoundedRectangleBorder(
-          side: const BorderSide(color: Color(0xFFA6752E)),
-          borderRadius: BorderRadius.circular(6),
+        shape: StadiumBorder(
+          side: BorderSide(color: AppColors.primary, width: 2),
         ),
       ),
     );

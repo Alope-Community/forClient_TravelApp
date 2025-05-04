@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/home/CategoryFilter.dart';
 import 'package:forclient_travelapp/widgets/home/HeaderSection.dart';
-import 'package:forclient_travelapp/widgets/home/SearchBanner.dart';
 import 'package:forclient_travelapp/widgets/home/TrendingCard.dart';
+import '../widgets/home/category_filter.dart';
+import '../widgets/home/banner.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

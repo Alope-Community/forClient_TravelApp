@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/home/SearchInput.dart';
+import 'package:forclient_travelapp/widgets/home/search_input.dart';
 
 class SearchBanner extends StatelessWidget {
   const SearchBanner({super.key});
@@ -10,16 +10,29 @@ class SearchBanner extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         // Gambar background
-        ClipRRect(
-          borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(24),
-            bottomRight: Radius.circular(24),
+        Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0x4C000000),
+                blurRadius: 15,
+                offset: Offset(0, 6),
+              ),
+            ],
           ),
-          child: Image.asset(
-            'assets/malioboro.jpg',
-            width: double.infinity,
-            height: 250,
-            fit: BoxFit.cover,
+          child: ClipRRect(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+            ),
+            child: Image.asset(
+              'assets/images/banner.jpg',
+              width: double.infinity,
+              color: Colors.black45,
+              colorBlendMode: BlendMode.darken,
+              height: 250,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
 
@@ -41,7 +54,10 @@ class SearchBanner extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(height: 60),
+
+                SizedBox(
+                  height: 60,
+                ), 
               ],
             ),
           ),

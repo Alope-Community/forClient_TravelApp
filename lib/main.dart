@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/screns/Home.dart';
+import 'package:forclient_travelapp/screens/splash_screen.dart';
+import 'package:forclient_travelapp/utils/constant.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'E-Wisata',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }
