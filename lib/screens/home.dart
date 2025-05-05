@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/home/HeaderSection.dart';
-import 'package:forclient_travelapp/widgets/home/TrendingCard.dart';
+import 'package:forclient_travelapp/widgets/home/header_section.dart';
+import 'package:forclient_travelapp/widgets/home/trending_card.dart';
 import '../widgets/home/category_filter.dart';
 import '../widgets/home/banner.dart';
 
