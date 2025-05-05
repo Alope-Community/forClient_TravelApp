@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color primary = Color(0xFF5A401A);
+  static const Color secondary = Color(0x825A401A);
   static const Color textPrimary = Color(0xFF212121);
   static const Color textSecondary = Color(0xFF424242);
   static const Color danger = Color(0xFFD32F2F);
@@ -13,7 +14,7 @@ class AppColors {
 class AppTextSizes {
   static const double heading1 = 42.0;
   static const double heading2 = 20.0;
-  static const double body = 16.0;
+  static const double body = 14.0;
   static const double small = 12.0;
   static const double caption = 10.0;
 }
