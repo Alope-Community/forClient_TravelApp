@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/home/HeaderSection.dart';
-import 'package:forclient_travelapp/widgets/home/TrendingCard.dart';
+import 'package:forclient_travelapp/widgets/home/header_section.dart';
+import 'package:forclient_travelapp/widgets/home/recomendation_card.dart';
+import 'package:forclient_travelapp/widgets/home/trending_card.dart';
 import '../widgets/home/category_filter.dart';
 import '../widgets/home/banner.dart';
 
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
           SearchBanner(),
           SizedBox(height: 10),
           CategoryFilter(),
-          HeaderSection(title: "Rekomendasi", seeAll: "see all"),
+          HeaderSection(title: "Trending", seeAll: "see all"),
           SizedBox(height: 10),
           SizedBox(
             height:
@@ -48,8 +49,38 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 15),
-          HeaderSection(seeAll: "see all", title: "Trending"),
-          SizedBox(height: 5),
+          HeaderSection(seeAll: "see all", title: "Recomendation"),
+          SizedBox(height: 10),
+          SizedBox(
+            height: 200,
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              children: [
+                RecomendationCard(
+                  imageUrl: 'assets/images/borubudur.jpg',
+                  title: 'Candi Borobudur',
+                  rating: '4.6',
+                  kategori: 'Sejarah',
+                  price: 'Rp.70.000 - Rp.100.000',
+                ),
+                RecomendationCard(
+                  imageUrl: 'assets/images/borubudur.jpg',
+                  title: 'Candi Borobudur',
+                  rating: '4.6',
+                  kategori: 'Sejarah',
+                  price: 'Rp.70.000 - Rp.100.000',
+                ),
+                RecomendationCard(
+                  imageUrl: 'assets/images/borubudur.jpg',
+                  title: 'Candi Borobudur',
+                  rating: '4.6',
+                  kategori: 'Sejarah',
+                  price: 'Rp.70.000 - Rp.100.000',
+                ),
+              ],
+            ),
+          ),
+          // SizedBox(height: 1,)
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/utils/constant.dart';
 
 class HeaderSection extends StatelessWidget {
   final String title;
@@ -25,22 +26,22 @@ class HeaderSection extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.local_fire_department,
-                  color: Colors.black,
+                  color: title == "Recomendation" ? AppColors.success : AppColors.danger,
                 ),
-                const SizedBox(width: 2), // Jarak antara icon dan teks
+                const SizedBox(width: 2),
                 GestureDetector(
                   onTap: () {
                     print('Title pressed');
                   },
                   child: Text(
                     title,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 18,
                       fontFamily: 'kanit',
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: title == "Recomendation" ? AppColors.success : AppColors.danger,
                     ),
                   ),
                 ),

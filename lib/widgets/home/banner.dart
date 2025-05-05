@@ -30,7 +30,7 @@ class SearchBanner extends StatelessWidget {
               width: double.infinity,
               color: Colors.black45,
               colorBlendMode: BlendMode.darken,
-              height: 250,
+              height: 300,
               fit: BoxFit.cover,
             ),
           ),

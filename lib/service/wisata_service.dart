@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:forclient_travelapp/model/Wisata.dart';
+import 'package:forclient_travelapp/model/wisata.dart';
 
 Future<List<Wisata>> getWisata() async {
   final String response = await rootBundle.loadString('assets/wisata.json');
