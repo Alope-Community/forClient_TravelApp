@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        padding: EdgeInsets.zero,
         children: [
           SearchBanner(),
           SizedBox(height: 10),
@@ -51,34 +52,27 @@ class HomePage extends StatelessWidget {
           SizedBox(height: 15),
           HeaderSection(seeAll: "see all", title: "Recomendation"),
           SizedBox(height: 10),
-          SizedBox(
-            height: 200,
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: [
-                RecomendationCard(
-                  imageUrl: 'assets/images/borubudur.jpg',
-                  title: 'Candi Borobudur',
-                  rating: '4.6',
-                  kategori: 'Sejarah',
-                  price: 'Rp.70.000 - Rp.100.000',
-                ),
-                RecomendationCard(
-                  imageUrl: 'assets/images/borubudur.jpg',
-                  title: 'Candi Borobudur',
-                  rating: '4.6',
-                  kategori: 'Sejarah',
-                  price: 'Rp.70.000 - Rp.100.000',
-                ),
-                RecomendationCard(
-                  imageUrl: 'assets/images/borubudur.jpg',
-                  title: 'Candi Borobudur',
-                  rating: '4.6',
-                  kategori: 'Sejarah',
-                  price: 'Rp.70.000 - Rp.100.000',
-                ),
-              ],
-            ),
+
+          RecomendationCard(
+            imageUrl: 'assets/images/borubudur.jpg',
+            title: 'Candi Borobudur',
+            rating: '4.6',
+            kategori: 'Sejarah',
+            price: 'Rp.70.000 - Rp.100.000',
+          ),
+          RecomendationCard(
+            imageUrl: 'assets/images/borubudur.jpg',
+            title: 'Candi Borobudur',
+            rating: '4.6',
+            kategori: 'Sejarah',
+            price: 'Rp.70.000 - Rp.100.000',
+          ),
+          RecomendationCard(
+            imageUrl: 'assets/images/borubudur.jpg',
+            title: 'Candi Borobudur',
+            rating: '4.6',
+            kategori: 'Sejarah',
+            price: 'Rp.70.000 - Rp.100.000',
           ),
           // SizedBox(height: 1,)
         ],

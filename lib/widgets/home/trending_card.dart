@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/screens/detail.dart';
 
 class Trendingcard extends StatelessWidget {
   final String imageUrl;
@@ -22,8 +23,7 @@ class Trendingcard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onDoubleTap: onTap ?? () {
-        // Default action if onTap is not provided
-        print('Card tapped! ${title}');
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage()));
       },
       child: Container(
         width: 180,
