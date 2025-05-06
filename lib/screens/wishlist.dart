@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/screens/home.dart';
+import 'package:forclient_travelapp/screens/list_wisata.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 class WishlistPage extends StatefulWidget {
@@ -29,19 +31,6 @@ class _WishlistPageState extends State<WishlistPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Wishlist',
-          style: AppTextStyles.heading2.copyWith(color: Colors.white),
-        ),
-        centerTitle: true,
-        backgroundColor: AppColors.primary,
-        foregroundColor: Colors.white,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
       backgroundColor: Colors.white,
       body:
           wishlistItems.isEmpty
@@ -66,9 +55,7 @@ class _WishlistPageState extends State<WishlistPage> {
                   return Dismissible(
                     key: Key(item['key']),
                     direction: DismissDirection.endToStart,
-                    onDismissed: (direction) {
-                      
-                    },
+                    onDismissed: (direction) {},
                     child: Card(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -170,6 +157,36 @@ class _WishlistPageState extends State<WishlistPage> {
                   );
                 },
               ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Whishlist',
+          ),
+        ],
+        currentIndex: 2,
+        selectedItemColor: AppColors.primary,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ListWisata()),
+            );
+          } else if (index == 2) {
+            // Wishlist tapped
+          }
+        },
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/screens/list_wisata.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 class HeaderSection extends StatelessWidget {
@@ -8,12 +9,12 @@ class HeaderSection extends StatelessWidget {
   final void Function()? onTitlePressed;
 
   const HeaderSection({
-    Key? key,
+    super.key,
     this.onSeeAllPressed,
     this.onTitlePressed,
     required this.title,
     required this.seeAll,
-  }) : super(key: key);
+  });
 
   
   
@@ -32,9 +33,7 @@ class HeaderSection extends StatelessWidget {
                 ),
                 const SizedBox(width: 2),
                 GestureDetector(
-                  onTap: () {
-                    print('Title pressed');
-                  },
+                  onTap: onTitlePressed,
                   child: Text(
                     title,
                     style: TextStyle(
@@ -51,9 +50,7 @@ class HeaderSection extends StatelessWidget {
               children: [
                GestureDetector(
                   onTap: () {
-                    // Aksi ketika "See All" ditekan
-                    // Misalnya, navigasi ke halaman lain atau tampilkan daftar lengkap
-                    print('See All pressed');
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => ListWisata()));
                   },
                   child: Text(
                     seeAll,

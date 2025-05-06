@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/home/search_input.dart';
+import 'package:forclient_travelapp/widgets/search_input.dart';
 
 class SearchBanner extends StatelessWidget {
-  const SearchBanner({super.key});
+  String imageUrl;
+  String title;
+  String page;
+
+  SearchBanner({
+    super.key,
+    required this.imageUrl,
+    required this.title,
+    required this.page,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +35,7 @@ class SearchBanner extends StatelessWidget {
               bottomRight: Radius.circular(20),
             ),
             child: Image.asset(
-              'assets/images/banner.jpg',
+              imageUrl,
               width: double.infinity,
               color: Colors.black45,
               colorBlendMode: BlendMode.darken,
@@ -41,11 +50,11 @@ class SearchBanner extends StatelessWidget {
           child: Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: const Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  'Kemana Kamu\nIngin Pergi?',
+                  title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 35,
@@ -54,10 +63,7 @@ class SearchBanner extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-
-                SizedBox(
-                  height: 60,
-                ), 
+                SizedBox(height: 60),
               ],
             ),
           ),
