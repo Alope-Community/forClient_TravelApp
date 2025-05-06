@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/screens/splash_screen.dart';
+import 'package:forclient_travelapp/screens/wishlist.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const WishlistPage(),
     );
   }
 }
