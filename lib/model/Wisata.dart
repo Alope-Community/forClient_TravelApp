@@ -1,36 +1,65 @@
 class Wisata {
-  String? id;
+  int id;
   String? name;
-  List<String>? kategori;
-  String? subKategori;
-  String? budjet;
-  List<String>? aksesbilitas;
-  List<String>? waktuKunjungan;
-  List<String>? rekomendasiUntuk;
-  String? lokasi;
-
+  double? rating;
+  String? kategori;
+  List<String?> subKategori;
+  int budjet;
+  Map<String, int>? aksesibilitas;
+  Map<String, dynamic>? waktuKunjungan;
+  Map<String, dynamic>? rekomendasiUntuk;
+  String lokasi;
 
   Wisata({
-    this.id,
-    this.name,
-    this.kategori,
-    this.subKategori,
-    this.budjet,
-    this.aksesbilitas,
-    this.waktuKunjungan,
-    this.rekomendasiUntuk,
-    this.lokasi,
+    required this.id,
+    required this.name,
+    required this.rating,
+    required this.kategori,
+    required this.subKategori,
+    required this.budjet,
+    this.aksesibilitas,
+    required this.waktuKunjungan,
+    required this.rekomendasiUntuk,
+    required this.lokasi,
   });
 
-  Wisata.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    kategori = json['kategori'].cast<String>();
-    subKategori = json['subKategori'];
-    budjet = json['budjet'];
-    aksesbilitas = json['aksesbilitas'].cast<String>();
-    waktuKunjungan = json['waktu_kunjungan'].cast<String>();
-    rekomendasiUntuk = json['direkomendasikan_untuk'].cast<String>();
-    lokasi = json['lokasi'];
+  factory Wisata.fromJson(Map<String, dynamic> json) {
+    return Wisata(
+      id: json['id'] as int,
+      name: json['nama'] as String?,
+      rating: json['rating'] as double?,
+      subKategori:
+          json['subKategori'] != null
+              ? List<String?>.from(json['subKategori'])
+              : <String?>[],
+      kategori: json['kategori'] as String?,
+      budjet:
+          json['budget'] is int
+              ? json['budget']
+              : int.parse(json['budget'].toString()),
+      aksesibilitas:
+          json['aksesibilitas'] != null
+              ? Map<String, int>.from(json['aksesibilitas'])
+              : null,
+      waktuKunjungan: Map<String, dynamic>.from(json['waktu_kunjungan']),
+      rekomendasiUntuk: Map<String, dynamic>.from(
+        json['direkomendasikan_untuk'],
+      ),
+      lokasi: json['lokasi'] as String,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'kategori': kategori,
+      'subKategori': subKategori,
+      'budjet': budjet,
+      'aksesibilitas': aksesibilitas,
+      'waktu_kunjungan': waktuKunjungan,
+      'direkomendasikan_untuk': rekomendasiUntuk,
+      'lokasi': lokasi,
+    };
   }
 }

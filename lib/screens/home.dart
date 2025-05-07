@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/screens/list_wisata.dart';
 import 'package:forclient_travelapp/screens/wishlist.dart';
+import 'package:forclient_travelapp/service/wisata_service.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 import 'package:forclient_travelapp/widgets/home/header_section.dart';
 import 'package:forclient_travelapp/widgets/home/recomendation_card.dart';
@@ -8,8 +9,21 @@ import 'package:forclient_travelapp/widgets/home/trending_card.dart';
 import '../widgets/home/category_filter.dart';
 import '../widgets/banner.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    getRecomendation(kategori: "Museum");
+    getTrending(kategori: "all");
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,27 +46,7 @@ class HomePage extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                Trendingcard(
-                  imageUrl: 'assets/images/pantai-selatan.jpg',
-                  title: 'Pantai Selatan',
-                  rating: '4.8',
-                  kategori: 'Alam',
-                  price: 'Rp.30.000 - Rp.50.000',
-                ),
-                Trendingcard(
-                  imageUrl: 'assets/images/banner.jpg',
-                  title: 'Malioboro',
-                  rating: '4.7',
-                  kategori: 'Perkotaan',
-                  price: 'Rp.50.000 - Rp.100.000',
-                ),
-                Trendingcard(
-                  imageUrl: 'assets/images/borubudur.jpg',
-                  title: 'Candi Borobudur',
-                  rating: '4.6',
-                  kategori: 'Sejarah',
-                  price: 'Rp.70.000 - Rp.100.000',
-                ),
+                
               ],
             ),
           ),
