@@ -53,9 +53,29 @@ class _WishlistPageState extends State<WishlistPage> {
                 itemBuilder: (context, index) {
                   final item = wishlistItems[index];
                   return Dismissible(
+                    background: Container(
+                      color: Colors.redAccent,
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 20),
+                          child: Icon(
+                            Icons.delete,
+                            size: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
                     key: Key(item['key']),
                     direction: DismissDirection.endToStart,
-                    onDismissed: (direction) {},
+                    onDismissed: (direction) {
+                      if (direction == DismissDirection.endToStart) {
+                        ScaffoldMessenger.of(
+                          context,
+                        ).showSnackBar(SnackBar(content: Text('Delete Item')));
+                      }
+                    },
                     child: Card(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(

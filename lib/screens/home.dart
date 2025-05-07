@@ -108,7 +108,7 @@ class HomePage extends StatelessWidget {
         selectedItemColor: AppColors.primary,
         onTap: (index) {
           if (index == 0) {
-            // Explro Tapped 
+            // Explro Tapped
           } else if (index == 1) {
             Navigator.push(
               context,
