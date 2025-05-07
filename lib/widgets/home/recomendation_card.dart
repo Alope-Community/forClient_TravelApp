@@ -22,23 +22,22 @@ class RecomendationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onDoubleTap: onTap,
+      onTap: onTap,
       child: Container(
-        height: 100,
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        height: 120,
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withOpacity(0.05),
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),
           ],
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             ClipRRect(
               borderRadius: const BorderRadius.only(
@@ -47,89 +46,82 @@ class RecomendationCard extends StatelessWidget {
               ),
               child: Image.asset(
                 imageUrl,
-                width: 150,
-                height: 100,
+                width: 120,
+                height: 120,
                 fit: BoxFit.cover,
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        title,
-                        style: TextStyle(
-                          color: AppColors.textPrimary,
-                          fontSize: 17,
-                          fontFamily: 'kanit',
-                          fontWeight: FontWeight.bold,
-                        ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: AppColors.textPrimary,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'kanit',
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 20),
-                        child: Row(
-                          spacing: 3,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: AppColors.primary,
-                              size: 15,
+                    ),
+                    const SizedBox(height: 5),
+                    Row(
+                      children: [
+                        const Icon(Icons.star, color: AppColors.primary, size: 16),
+                        const SizedBox(width: 4),
+                        Text(
+                          rating,
+                          style: const TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 14,
+                            fontFamily: 'kanit',
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 5),
+                    Row(
+                      children: [
+                        const Icon(Icons.money_rounded, color: AppColors.primary, size: 18),
+                        const SizedBox(width: 6),
+                        Flexible(
+                          child: Text(
+                            price,
+                            style: const TextStyle(
+                              color: AppColors.textSecondary,
+                              fontSize: 14,
+                              fontFamily: 'kanit',
                             ),
-                            Text(
-                              rating,
-                              style: TextStyle(
-                                color: AppColors.textSecondary,
-                                fontFamily: 'kanit',
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                              ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 5),
+                    Row(
+                      children: [
+                        const Icon(Icons.category, color: AppColors.primary, size: 18),
+                        const SizedBox(width: 6),
+                        Flexible(
+                          child: Text(
+                            kategori,
+                            style: const TextStyle(
+                              color: AppColors.textSecondary,
+                              fontSize: 14,
+                              fontFamily: 'kanit',
                             ),
-                          ],
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.money_rounded,
-                        color: AppColors.primary,
-                        size: 20,
-                      ),
-                      SizedBox(width: 10),
-                      Text(
-                        price,
-                        style: TextStyle(
-                          color: AppColors.textSecondary,
-                          fontFamily: 'kanit',
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(Icons.category, color: AppColors.primary, size: 20),
-                      SizedBox(width: 10,),
-                      Text(
-                        kategori,
-                        style: TextStyle(
-                          color: AppColors.textSecondary,
-                          fontFamily: 'kanit',
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

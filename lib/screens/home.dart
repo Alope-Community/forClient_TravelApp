@@ -20,10 +20,9 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    getRecomendation(kategori: "Museum");
+    getRecomendation(kategori: "All");
     getTrending(kategori: "all");
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +42,7 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height:
                 210, // Memberi tinggi tetap agar horizontal scroll bisa bekerja
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
+            child: ListView(scrollDirection: Axis.horizontal, children: [
                 
               ],
             ),
@@ -63,28 +60,36 @@ class _HomePageState extends State<HomePage> {
                 },
           ),
           SizedBox(height: 10),
-          RecomendationCard(
-            imageUrl: 'assets/images/borubudur.jpg',
-            title: 'Candi Borobudur',
-            rating: '4.6',
-            kategori: 'Sejarah',
-            price: 'Rp.70.000 - Rp.100.000',
+          FutureBuilder(
+            future: getRecomendation(kategori: 'All'),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(child: CircularProgressIndicator());
+              } else if (snapshot.hasError) {
+                return Center(child: Text('Terjadi kesalahan'));
+              } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                return Center(child: Text('Tidak ada data'));
+              } else {
+                return ListView.builder(
+                  shrinkWrap: true,
+                  physics:
+                      NeverScrollableScrollPhysics(),
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (context, index) {
+                    final item = snapshot.data![index];
+                    return RecomendationCard(
+                      imageUrl: 'assets/images/borubudur.jpg',
+                      title: item.name ?? '',
+                      rating: item.rating?.toString() ?? '',
+                      kategori: item.kategori ?? '',
+                      price: item.budjet?.toString() ?? '',
+                    );
+                  },
+                );
+              }
+            },
           ),
-          RecomendationCard(
-            imageUrl: 'assets/images/borubudur.jpg',
-            title: 'Candi Borobudur',
-            rating: '4.6',
-            kategori: 'Sejarah',
-            price: 'Rp.70.000 - Rp.100.000',
-          ),
-          RecomendationCard(
-            imageUrl: 'assets/images/borubudur.jpg',
-            title: 'Candi Borobudur',
-            rating: '4.6',
-            kategori: 'Sejarah',
-            price: 'Rp.70.000 - Rp.100.000',
-          ),
-          // SizedBox(height: 1,)
+          SizedBox(height: 1),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
