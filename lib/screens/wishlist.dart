@@ -55,6 +55,7 @@ class _WishlistPageState extends State<WishlistPage> {
                   return Dismissible(
                     background: Container(
                       color: Colors.redAccent,
+                      margin: EdgeInsets.only(bottom: 16),
                       child: Align(
                         alignment: Alignment.centerRight,
                         child: Padding(
@@ -69,13 +70,49 @@ class _WishlistPageState extends State<WishlistPage> {
                     ),
                     key: Key(item['key']),
                     direction: DismissDirection.endToStart,
-                    onDismissed: (direction) {
+                    confirmDismiss: (direction) async {
                       if (direction == DismissDirection.endToStart) {
-                        ScaffoldMessenger.of(
-                          context,
-                        ).showSnackBar(SnackBar(content: Text('Delete Item')));
+                        bool dismiss = false;
+                        await showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: const Text(
+                                "Yakin Ingin Hapus Data Wishlist",
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    dismiss = true;
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(content: Text('Delete Item')),
+                                    );
+                                    Navigator.pop(context);
+                                  },
+                                  child: const Text("Ya"),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    dismiss = false;
+                                    Navigator.pop(context);
+                                  },
+                                  child: const Text("Tidak"),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                        if (dismiss) {
+                          setState(() {
+                            wishlistItems.removeAt(index);
+                          });
+                        }
                       }
                     },
+                    onResize: () {
+                      print("Resized");
+                    },
+                    resizeDuration: Duration(seconds: 5),
                     child: Card(
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
