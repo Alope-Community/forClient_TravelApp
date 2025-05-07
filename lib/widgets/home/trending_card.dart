@@ -26,7 +26,7 @@ class Trendingcard extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage()));
       },
       child: Container(
-        width: 180,
+        width: 200,
         margin: const EdgeInsets.only(left: 16, right: 8,),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -81,7 +81,7 @@ class Trendingcard extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        price,
+                        '\IDR ${int.parse(price).toStringAsFixed(2)}',
                         style: const TextStyle(
                           fontSize: 10,
                           fontFamily: 'kanit',

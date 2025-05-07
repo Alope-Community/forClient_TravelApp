@@ -39,13 +39,41 @@ class _HomePageState extends State<HomePage> {
           CategoryFilter(),
           HeaderSection(title: "Trending", seeAll: "see all"),
           SizedBox(height: 10),
-          SizedBox(
-            height:
-                210, // Memberi tinggi tetap agar horizontal scroll bisa bekerja
-            child: ListView(scrollDirection: Axis.horizontal, children: [
-                
-              ],
-            ),
+          FutureBuilder(
+            future: getTrending(kategori: "All"),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: CircularProgressIndicator(color: AppColors.primary),
+                );
+              } else if (snapshot.hasError) {
+                return Center(child: Text("Terjadi Kesalahan"));
+              } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                return Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: Center(child: Text('Tidak ada data')),
+                );
+              } else {
+                return SizedBox(
+                  height: 220,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      final item = snapshot.data![index];
+                      debugPrint(item.name.toString());
+                      return Trendingcard(
+                        imageUrl: 'assets/images/borubudur.jpg',
+                        title: item.name.toString(),
+                        rating: item.rating.toString(),
+                        kategori: item.kategori.toString(),
+                        price: item.budjet.toString(),
+                      );
+                    },
+                  ),
+                );
+              }
+            },
           ),
           SizedBox(height: 15),
           HeaderSection(
@@ -72,17 +100,16 @@ class _HomePageState extends State<HomePage> {
               } else {
                 return ListView.builder(
                   shrinkWrap: true,
-                  physics:
-                      NeverScrollableScrollPhysics(),
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, index) {
                     final item = snapshot.data![index];
                     return RecomendationCard(
                       imageUrl: 'assets/images/borubudur.jpg',
-                      title: item.name ?? '',
-                      rating: item.rating?.toString() ?? '',
-                      kategori: item.kategori ?? '',
-                      price: item.budjet?.toString() ?? '',
+                      title: item.name.toString(),
+                      rating: item.rating.toString(),
+                      kategori: item.kategori.toString(),
+                      price: item.budjet.toString(),
                     );
                   },
                 );
