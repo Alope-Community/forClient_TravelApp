@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/model/Wisata.dart';
 import 'package:forclient_travelapp/screens/list_wisata.dart';
 import 'package:forclient_travelapp/screens/wishlist.dart';
 import 'package:forclient_travelapp/service/wisata_service.dart';
@@ -24,7 +23,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     getRecomendation(kategori: "All");
-    getTrending(kategori: "all");
+    getTrending(kategori: "All");
   }
 
   @override
