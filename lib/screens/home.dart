@@ -64,10 +64,10 @@ class _HomePageState extends State<HomePage> {
                       debugPrint(item.images[0].toString());
                       return Trendingcard(
                         imageUrl:item.images[0].toString(),
-                        title: item.name.toString(),
+                        title: item.nama.toString(),
                         rating: item.rating.toString(),
                         kategori: item.kategori.toString(),
-                        price: item.budjet.toString(),
+                        price: item.budget.toString(),
                       );
                     },
                   ),
@@ -106,10 +106,10 @@ class _HomePageState extends State<HomePage> {
                     final item = snapshot.data![index];
                     return RecomendationCard(
                       imageUrl: item.images[0].toString(),
-                      title: item.name.toString(),
+                      title: item.nama.toString(),
                       rating: item.rating.toString(),
                       kategori: item.kategori.toString(),
-                      price: item.budjet.toString(),
+                      price: item.budget.toString(),
                     );
                   },
                 );
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Whishlist',
+            label: 'Wishlist',
           ),
         ],
         currentIndex: 0,

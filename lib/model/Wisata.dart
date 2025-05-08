@@ -1,41 +1,41 @@
 class Wisata {
   int id;
-  String? name;
-  double? rating;
-  String? kategori;
+  String? nama;
   List<String?> subKategori;
-  int budjet;
+  String? kategori;
+  int budget;
   Map<String, int>? aksesibilitas;
   Map<String, dynamic>? waktuKunjungan;
-  Map<String, dynamic>? rekomendasiUntuk;
-  List<String?> images;
+  Map<String, dynamic>? direkomendasikanUntuk;
   String lokasi;
+  List<dynamic> images;
+  double? rating;
 
   Wisata({
     required this.id,
-    required this.name,
-    required this.rating,
-    required this.kategori,
+    required this.nama,
     required this.subKategori,
-    required this.budjet,
-    this.aksesibilitas,
+    required this.kategori,
+    required this.budget,
+    required this.aksesibilitas,
     required this.waktuKunjungan,
-    required this.rekomendasiUntuk,
+    required this.direkomendasikanUntuk,
     required this.lokasi,
     required this.images,
+    required this.rating,
   });
 
   factory Wisata.fromJson(Map<String, dynamic> json) {
     return Wisata(
       id: json['id'] as int,
-      name: json['nama'] as String?,
+      nama: json['nama'] as String?,
       rating: json['rating'] as double?,
       subKategori:
           json['subKategori'] != null
               ? List<String?>.from(json['subKategori'])
               : <String?>[],
       kategori: json['kategori'] as String?,
-      budjet:
+      budget:
           json['budget'] is int
               ? json['budget']
               : int.parse(json['budget'].toString()),
@@ -44,28 +44,25 @@ class Wisata {
               ? Map<String, int>.from(json['aksesibilitas'])
               : null,
       waktuKunjungan: Map<String, dynamic>.from(json['waktu_kunjungan']),
-      rekomendasiUntuk: Map<String, dynamic>.from(
+      direkomendasikanUntuk: Map<String, dynamic>.from(
         json['direkomendasikan_untuk'],
       ),
       lokasi: json['lokasi'] as String,
-      images: json['images'] != null 
-              ? List<String?>.from(json['images'])
-              : <String?>[]
+      images: json['images'] as List<dynamic>
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'name': name,
+      'nama': nama,
       'kategori': kategori,
-      'subKategori': subKategori,
-      'budjet': budjet,
+      'sub_kategori': subKategori,
+      'budget': budget,
       'aksesibilitas': aksesibilitas,
       'waktu_kunjungan': waktuKunjungan,
-      'direkomendasikan_untuk': rekomendasiUntuk,
+      'direkomendasikan_untuk': direkomendasikanUntuk,
       'lokasi': lokasi,
-      'images' : images
     };
   }
 }

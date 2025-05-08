@@ -29,9 +29,8 @@
         },
         "lokasi": "Jl. Rotowijayan Blok No. 1, Panembahan, Kraton, Yogyakarta",
         "images": [
-            "https://www.google.com/imgres?q=keraton%20jogja&imgurl=https%3A%2F%2Fkebudayaan.jogjakota.go.id%2Fassets%2Finstansi%2Fkebudayaan%2Fgallery%2Fpage_20210805_064132.jpg&imgrefurl=https%3A%2F%2Fkebudayaan.jogjakota.go.id%2Fpage%2Findex%2Fkawasan-kraton&docid=rtFDIP4mTJ9eSM&tbnid=K1vOpirpht9IyM&vet=12ahUKEwiwrtLUwpCNAxUAzjgGHcDqL_YQM3oECGMQAA..i&w=720&h=405&hcb=2&ved=2ahUKEwiwrtLUwpCNAxUAzjgGHcDqL_YQM3oECGMQAA",
-            "https://www.google.com/imgres?q=keraton%20jogja&imgurl=https%3A%2F%2Fasset.kompas.com%2Fcrops%2FmB_1EEZ4UBoZOgnqHGyY6Xk9_Fs%3D%2F19x13%3A701x468%2F1200x800%2Fdata%2Fphoto%2F2022%2F01%2F23%2F61ecde67a7985.jpeg&imgrefurl=https%3A%2F%2Ftravel.kompas.com%2Fread%2F2023%2F07%2F24%2F230811327%2F5-beda-keraton-yogyakarta-dan-solo-berawal-dari-perjanjian-jatisari%3Fpage%3Dall&docid=3kqUWM4Q7VJoUM&tbnid=8Z7XCilyfNhyPM&vet=12ahUKEwiwrtLUwpCNAxUAzjgGHcDqL_YQM3oECBgQAA..i&w=1200&h=800&hcb=2&ved=2ahUKEwiwrtLUwpCNAxUAzjgGHcDqL_YQM3oECBgQAA",
-            "https://www.google.com/imgres?q=keraton%20jogja&imgurl=https%3A%2F%2Fniagatour.com%2Fwp-content%2Fuploads%2F2019%2F02%2Fkraton-jogja-1hari21.jpg&imgrefurl=https%3A%2F%2Fniagatour.com%2Fkeraton-yogyakarta%2F&docid=EHJK9eYaB3m65M&tbnid=m6qZpPu6wFQ44M&vet=12ahUKEwiwrtLUwpCNAxUAzjgGHcDqL_YQM3oECFsQAA..i&w=600&h=400&hcb=2&ved=2ahUKEwiwrtLUwpCNAxUAzjgGHcDqL_YQM3oECFsQAA"
+            "https://sofiayogya.com/upload/kraton-yogyakarta.jpg",
+            "https://wisatahappy.com/wp-content/uploads/2024/03/Keraton-Yogyakarta-Isay-So.jpg"
         ]
     },
     {
@@ -958,7 +957,12 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Gunung Kidul, Yogyakarta"
+        "lokasi": "Gunung Kidul, Yogyakarta",
+        "images": [
+            "https://kotajogja.co.id/wp-content/uploads/2023/07/Harga-tiket-masuk-pantai-wediombo.jpg",
+            "https://asset.kompas.com/crops/RPRhM0TLDwES5yEWbE46-4qlBm0=/0x0:0x0/1200x800/data/photo/2022/05/17/62836abc662c4.jpg",
+            "https://asset.kompas.com/crops/YH-g3V8K_sb7vT-9KMQfFky1PYk=/0x0:1650x1100/750x500/data/photo/2020/12/29/5feaca020f15e.jpg"
+        ]
     },
     {
         "id": 32,
@@ -985,7 +989,12 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Candi Ijo, Sleman, Yogyakarta"
+        "lokasi": "Candi Ijo, Sleman, Yogyakarta",
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/9/9d/Candi_Ijo.JPG",
+            "https://wisatabudayaku.sv.ugm.ac.id/wp-content/uploads/sites/977/2019/08/Candi-Perwara.jpg",
+            "https://indonesiatraveler.id/wp-content/uploads/2020/06/photo-by-hhabibie.jpg"
+        ]
     },
     {
         "id": 33,
@@ -1012,7 +1021,11 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Kulon Progo, Yogyakarta"
+        "lokasi": "Kulon Progo, Yogyakarta",
+        "images": [
+            "https://berjogja.com/wp-content/uploads/2025/02/Pantai-Glagah.jpg",
+            "https://nagantour.com/wp-content/uploads/2020/03/Pemecah-Ombak-di-Pantai-Glagah-Indah.webp"
+        ]
     },
     {
         "id": 34,
@@ -1039,7 +1052,12 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Kulon Progo, Yogyakarta"
+        "lokasi": "Kulon Progo, Yogyakarta",
+        "images": [
+            "https://asset.kompas.com/crops/95gXjrRy2q1A0UgJy3rbBjskTo4=/0x112:1600x1178/1200x800/data/photo/2022/06/19/62af1dcb3940e.jpeg",
+            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9U3Y2UFUwbf9a0ZW01SQ-R04O2ps66AU3hEeudhhRZl_VvsLpGUvJlZsaJ9uZfVlf8E2Md8A_cbNyRYo4lXa2FdvzPeaLmvpWsKpSWy8DfpBSGemYVeWfkBClS2QZ36AsOMqR1qPK6RtXP45dhYiUTeLQQqS9OS_D68uCxSK1gRZJf34egjC_jsxa/s750/Goa%20Kiskenda%20Kulon%20Progo%20terbaru.webp",
+            "https://saibetik.com/wp-content/uploads/2024/05/GOA-2.jpeg"
+        ]
     },
     {
         "id": 35,
@@ -1066,7 +1084,10 @@
             "Keluarga": 1,
             "Solo Traveler": 1
         },
-        "lokasi": "Jl. Kolonel Sugiyono, Yogyakarta"
+        "lokasi": "Jl. Kolonel Sugiyono, Yogyakarta",
+        "images": [
+            "https://cdn.wisata.app/diary/10601120-5039-80dc-be8a-eda66d567b0e.jpg"
+        ]
     },
     {
         "id": 36,
@@ -1093,7 +1114,11 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Gunung Kidul, Yogyakarta"
+        "lokasi": "Gunung Kidul, Yogyakarta",
+        "images": [
+            "https://asset.kompas.com/crops/UAtpMzvlzMn-u2o5mKqHw6nnoR0=/0x0:0x0/1200x800/data/photo/2022/01/13/61df9374bf93c.jpg",
+            "https://nagantour.com/wp-content/uploads/2020/03/pantai-baron.webp"
+        ]
     },
     {
         "id": 37,
@@ -1120,7 +1145,12 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Purwomartani, Kalasan, Sleman, Yogyakarta"
+        "lokasi": "Purwomartani, Kalasan, Sleman, Yogyakarta",
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Candi_Sambisari_main_temple_2013-11-28_01.jpg/1200px-Candi_Sambisari_main_temple_2013-11-28_01.jpg",
+            "https://asset.kompas.com/crops/9rd28xbx5d4cuyZtx4MXz4aczKg=/134x161:1572x1119/1200x800/data/photo/2023/02/02/63db284b9ab73.jpg",
+            "https://www.magnetoholidays.id/wp-content/uploads/2023/03/Berwisata-ke-Situs-Peninggalan-Sejarah-Candi-Sambisari-yang-Mirip-Kastil-Batu.jpg"
+        ]
     },
     {
         "id": 38,
@@ -1147,6 +1177,10 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Gunung Kidul, Yogyakarta"
+        "lokasi": "Gunung Kidul, Yogyakarta",
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/5/52/Pantai_Drini_Top_View.jpg",
+            "https://arkadewi.id/wp-content/uploads/2015/01/pantai_drini.jpg"
+        ]
     }
 ]

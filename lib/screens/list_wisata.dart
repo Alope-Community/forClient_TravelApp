@@ -63,10 +63,10 @@ class _ListWisataState extends State<ListWisata> {
                           final item = snapshot.data![index];
                           return CardWidget(
                             imageUrl: item.images[0].toString(),
-                            title: item.name.toString(),
+                            title: item.nama.toString(),
                             rating: item.rating.toString(),
                             kategori: item.kategori.toString(),
-                            price: item.budjet.toString(),
+                            price: item.budget.toString(),
                           );
                         },
                       );
