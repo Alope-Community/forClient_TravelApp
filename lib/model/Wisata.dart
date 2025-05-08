@@ -8,6 +8,7 @@ class Wisata {
   Map<String, int>? aksesibilitas;
   Map<String, dynamic>? waktuKunjungan;
   Map<String, dynamic>? rekomendasiUntuk;
+  List<String?> images;
   String lokasi;
 
   Wisata({
@@ -21,6 +22,7 @@ class Wisata {
     required this.waktuKunjungan,
     required this.rekomendasiUntuk,
     required this.lokasi,
+    required this.images,
   });
 
   factory Wisata.fromJson(Map<String, dynamic> json) {
@@ -46,6 +48,9 @@ class Wisata {
         json['direkomendasikan_untuk'],
       ),
       lokasi: json['lokasi'] as String,
+      images: json['images'] != null 
+              ? List<String?>.from(json['images'])
+              : <String?>[]
     );
   }
 
@@ -60,6 +65,7 @@ class Wisata {
       'waktu_kunjungan': waktuKunjungan,
       'direkomendasikan_untuk': rekomendasiUntuk,
       'lokasi': lokasi,
+      'images' : images
     };
   }
 }

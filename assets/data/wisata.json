@@ -230,7 +230,7 @@
     },
     {
         "id": 8,
-        "rating": 3.6,
+        "rating": 4.0,
         "nama": "Tebing Breksi",
         "subKategori": [
             "Wisata Alam",
@@ -262,7 +262,7 @@
     },
     {
         "id": 9,
-        "rating": 3.5,
+        "rating": 3.7,
         "nama": "Taman Pintar",
         "subKategori": [
             "Wisata Kota",
@@ -349,7 +349,11 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Borobudur, Magelang, Jawa Tengah"
+        "lokasi": "Borobudur, Magelang, Jawa Tengah",
+        "images" : [
+            "https://cpanel-blog.smsperkasa.com/wp-content/uploads/2023/09/Tata-Letak-dan-Bentuk-Candi-Borobudur-1024x683.jpg",
+            "https://assets-a1.kompasiana.com/items/album/2021/04/28/tempat-wisata-sekitar-candi-borobudur-60893a04d541df5e5c65c512.jpg"
+        ]
     },
     {
         "id": 12,
@@ -378,11 +382,15 @@
             "Pasangan": 1,
             "Solo Traveler": 1
         },
-        "lokasi": "Jl. Malioboro, Yogyakarta"
+        "lokasi": "Jl. Malioboro, Yogyakarta",
+        "images":[
+            "https://niagatour.com/wp-content/smush-webp/2018/02/malioboro-@ahiwicaksono.jpg.webp",
+            "https://statik.tempo.co/data/2019/12/03/id_894257/894257_720.jpg"
+        ]
     },
     {
         "id": 13,
-        "rating": 4.5,
+        "rating": 4.0,
         "nama": "Alun-Alun Kidul",
         "subKategori": [
             "Wisata Kota",
@@ -405,11 +413,14 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Alun-Alun Kidul, Yogyakarta"
+        "lokasi": "Alun-Alun Kidul, Yogyakarta",
+        "images":[
+            "https://img.era.id/f6SdFLNNj5X8fHWbdemTk6gavv3C7ZVKDr_9qF1GoEY/rs:fill:1280:720/g:sm/bG9jYWw6Ly8vcHVibGlzaGVycy8xMTY0MjYvMjAyMzAxMjcxMzE2LW1haW4uanBn.jpg"
+        ]
     },
     {
         "id": 14,
-        "rating": 3.5,
+        "rating": 4.2,
         "nama": "Goa Pindul",
         "subKategori": [
             "Wisata Alam",
@@ -432,11 +443,15 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Bejiharjo, Karangmojo, Gunung Kidul, Yogyakarta"
+        "lokasi": "Bejiharjo, Karangmojo, Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/05/ef/93/sewa-mobil-jogja-paket.jpg",
+            "https://2.bp.blogspot.com/-jjZpMa4S1ik/TzpO4TSeoAI/AAAAAAAAANU/0gb9yJUd684/s1600/DSC_0033edt.jpg"
+        ]
     },
     {
         "id": 15,
-        "rating": 3.5,
+        "rating": 4.1,
         "nama": "Pantai Timang",
         "subKategori": [
             "Wisata Alam",
@@ -459,11 +474,15 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta"
+        "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://simasinsurtech.com/wp-content/uploads/2023/08/Kereta-Gantung-Pantai-Timang-body.jpeg",
+            "https://pamitranrentalmotor.com/wp-content/uploads/2019/01/pantai-timang-@tankwanhong.jpg"
+        ]
     },
     {
         "id": 16,
-        "rating": 4.3,
+        "rating": 4.0,
         "nama": "Museum Sonobudoyo",
         "subKategori": [
             "Wisata Kota",
@@ -486,11 +505,14 @@
             "Keluarga": 1,
             "Solo Traveler": 1
         },
-        "lokasi": "Jl. Pangurakan No.6, Yogyakarta"
+        "lokasi": "Jl. Pangurakan No.6, Yogyakarta",
+        "images":[
+            "https://arkadewi.id/wp-content/uploads/2014/07/Museum-Sonobudoyo.webp"
+        ]
     },
     {
         "id": 17,
-        "rating": 4.3,
+        "rating": 4.4,
         "nama": "Kaliurang",
         "subKategori": [
             "Wisata Alam",
@@ -513,11 +535,14 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Kaliurang, Sleman, Yogyakarta"
+        "lokasi": "Kaliurang, Sleman, Yogyakarta",
+        "images": [
+            "https://nagantour.com/wp-content/uploads/2023/07/wisata-kaliurang.webp"
+        ]
     },
     {
         "id": 18,
-        "rating": 4.3,
+        "rating": 3.9,
         "nama": "Candi Ratu Boko",
         "subKategori": [
             "Wisata Kota",
@@ -540,7 +565,10 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Bokoharjo, Prambanan, Sleman, Yogyakarta"
+        "lokasi": "Bokoharjo, Prambanan, Sleman, Yogyakarta",
+        "images": [
+            "https://i0.wp.com/blog.ubuvilla.com/wp-content/uploads/2023/12/image-34.png"
+        ]
     },
     {
         "id": 19,
@@ -567,11 +595,14 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Tepus, Gunung Kidul, Yogyakarta"
+        "lokasi": "Tepus, Gunung Kidul, Yogyakarta",
+        "images": [
+            "https://www.bakpiamutiarajogja.com/wp-content/uploads/2015/06/info-wisata-lengkap-pantai-indrayanti.png"
+        ]
     },
     {
         "id": 20,
-        "rating": 4.3,
+        "rating": 3.7,
         "nama": "Kebun Binatang Gembira Loka",
         "subKategori": [
             "Wisata Kota",
@@ -594,11 +625,15 @@
         "direkomendasikan_untuk": {
             "Keluarga": 1
         },
-        "lokasi": "Jl. Kebun Raya No.2, Yogyakarta"
+        "lokasi": "Jl. Kebun Raya No.2, Yogyakarta",
+        "images":[
+            "https://jogjakeren.com/wp-content/uploads/2024/08/gembiraloka-zoo-jogja-keren.webp",
+            "https://arkadewi.id/wp-content/uploads/2022/08/Gembira-Loka-Zoo.jpg"
+        ]
     },
     {
         "id": 21,
-        "rating": 4.3,
+        "rating": 4.2,
         "nama": "Puncak Becici",
         "subKategori": [
             "Wisata Alam",
@@ -621,11 +656,15 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Gunung Kidul, Yogyakarta"
+        "lokasi": "Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://www.bakpiamutiarajogja.com/wp-content/uploads/2017/08/puncak-becici-foto-dari-@gadistafidha.jpg",
+            "https://www.kartanesia.com/wp-content/uploads/2019/05/Keindahan-Alam-Puncak-Becici.jpg"
+        ]
     },
     {
         "id": 22,
-        "rating": 4.3,
+        "rating": 3.7,
         "nama": "Museum Affandi",
         "subKategori": [
             "Wisata Kota",
@@ -648,11 +687,14 @@
             "Solo Traveler": 1,
             "Fotografer": 1
         },
-        "lokasi": "Jl. Laksda Adisucipto No.167, Yogyakarta"
+        "lokasi": "Jl. Laksda Adisucipto No.167, Yogyakarta",
+        "images":[
+            "https://museum.co.id/wp-content/uploads/2020/09/Museum-Affandi.jpg"
+        ]
     },
     {
         "id": 23,
-        "rating": 4.3,
+        "rating": 4.5,
         "nama": "Air Terjun Sri Gethuk",
         "subKategori": [
             "Wisata Alam",
@@ -675,7 +717,11 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Widoro, Ngestiharjo, Gunung Kidul, Yogyakarta"
+        "lokasi": "Widoro, Ngestiharjo, Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://garasijogja.com/wp-content/uploads/2016/09/novitavs_.jpg",
+            "https://pancar.id/wp-content/uploads/2024/07/Pancar.id-Menikmati-Keindahan-Alam-Air-Terjun-Sri-Gethuk-Yogyakarta.jpg"
+        ]
     },
     {
         "id": 24,
@@ -702,11 +748,14 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Krakal, Gunung Kidul, Yogyakarta"
+        "lokasi": "Krakal, Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://storage.googleapis.com/seo-cms/assets/Pesona_Pantai_Krakal_Jogja_92f7885a4e/Pesona_Pantai_Krakal_Jogja_92f7885a4e.jpg"
+        ]
     },
     {
         "id": 25,
-        "rating": 4.3,
+        "rating": 3.8,
         "nama": "Benteng Vredeburg",
         "subKategori": [
             "Wisata Kota",
@@ -729,11 +778,14 @@
             "Keluarga": 1,
             "Solo Traveler": 1
         },
-        "lokasi": "Jl. Margo Mulyo No.6, Yogyakarta"
+        "lokasi": "Jl. Margo Mulyo No.6, Yogyakarta",
+        "images":[
+            "https://asset.kompas.com/crops/FOpB6P7634YFwHR-dg4OEbwZKzc=/0x0:2553x1702/1200x800/data/photo/2024/06/08/6663940c5dab2.jpg"
+        ]
     },
     {
         "id": 26,
-        "rating": 4.3,
+        "rating": 4.5,
         "nama": "Bukit Bintang",
         "subKategori": [
             "Wisata Alam",
@@ -756,11 +808,14 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Gunung Kidul, Yogyakarta"
+        "lokasi": "Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://yogjo.com/wp-content/uploads/2020/03/bukit-bintang-jogja.jpg"
+        ]
     },
     {
         "id": 27,
-        "rating": 4.3,
+        "rating": 3.8,
         "nama": "Goa Selarong",
         "subKategori": [
             "Wisata Alam",
@@ -783,11 +838,14 @@
             "Keluarga": 1,
             "Pasangan": 1
         },
-        "lokasi": "Girimulyo, Dukun, Bantul, Yogyakarta"
+        "lokasi": "Girimulyo, Dukun, Bantul, Yogyakarta",
+        "images":[
+            "https://asset.kompas.com/crops/OZvBetYRjceywyEvvEeg914scqo=/0x0:780x520/1200x800/data/photo/2021/07/18/60f3f2f9e4bdf.jpg"
+        ]
     },
     {
         "id": 28,
-        "rating": 4.3,
+        "rating": 4.5,
         "nama": "Pantai Siung",
         "subKategori": [
             "Wisata Alam",
@@ -810,7 +868,10 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta"
+        "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta",
+        "images":[
+            "https://visitingjogja.jogjaprov.go.id/wp-content/uploads/2017/01/pantai-siung.jpg"
+        ]
     },
     {
         "id": 29,
@@ -837,11 +898,14 @@
             "Keluarga": 1,
             "Solo Traveler": 1
         },
-        "lokasi": "Jl. Dr. Sutomo No.13, Yogyakarta"
+        "lokasi": "Jl. Dr. Sutomo No.13, Yogyakarta",
+        "images":[
+            "https://www.kartanesia.com/wp-content/uploads/2019/04/Museum-Batik-Jogja.jpg"
+        ]
     },
     {
         "id": 30,
-        "rating": 4.3,
+        "rating": 4.5,
         "nama": "Puncak Suroloyo",
         "subKategori": [
             "Wisata Alam",
@@ -864,7 +928,10 @@
             "Pasangan": 1,
             "Fotografer": 1
         },
-        "lokasi": "Kulon Progo, Yogyakarta"
+        "lokasi": "Kulon Progo, Yogyakarta",
+        "images":[
+            "https://cdn2.gnfi.net/gnfi/uploads/articles/0ac729bb52ff8c83515d34a65125f7c357b35175-s2-n1-eab39b1645bcda7927a7196e2628bdbc.jpg"
+        ]
     },
     {
         "id": 31,

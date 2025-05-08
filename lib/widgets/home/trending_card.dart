@@ -45,7 +45,7 @@ class Trendingcard extends StatelessWidget {
             ClipRRect(
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-              child: Image.asset(
+              child: Image.network(
                 imageUrl,
                 width: double.infinity,
                 height: 120,

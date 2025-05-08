@@ -44,7 +44,7 @@ class RecomendationCard extends StatelessWidget {
                 topLeft: Radius.circular(10),
                 bottomLeft: Radius.circular(10),
               ),
-              child: Image.asset(
+              child: Image.network(
                 imageUrl,
                 width: 120,
                 height: 120,

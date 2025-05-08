@@ -61,9 +61,9 @@ class _HomePageState extends State<HomePage> {
                     itemCount: snapshot.data!.length,
                     itemBuilder: (context, index) {
                       final item = snapshot.data![index];
-                      debugPrint(item.name.toString());
+                      debugPrint(item.images[0].toString());
                       return Trendingcard(
-                        imageUrl: 'assets/images/borubudur.jpg',
+                        imageUrl:item.images[0].toString(),
                         title: item.name.toString(),
                         rating: item.rating.toString(),
                         kategori: item.kategori.toString(),
@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     final item = snapshot.data![index];
                     return RecomendationCard(
-                      imageUrl: 'assets/images/borubudur.jpg',
+                      imageUrl: item.images[0].toString(),
                       title: item.name.toString(),
                       rating: item.rating.toString(),
                       kategori: item.kategori.toString(),
