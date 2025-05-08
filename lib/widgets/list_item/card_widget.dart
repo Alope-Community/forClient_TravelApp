@@ -45,11 +45,23 @@ class CardWidget extends StatelessWidget {
                 topLeft: Radius.circular(10),
                 bottomLeft: Radius.circular(10),
               ),
-              child: Image.asset(
+              child: Image.network(
                 imageUrl,
-                width: 150,
+                width: 100,
                 height: 100,
                 fit: BoxFit.cover,
+                loadingBuilder:
+                    (context, child, loadingProgress) =>
+                        loadingProgress == null
+                            ? child
+                            : SizedBox(
+                              height: 120,
+                              child: Center(
+                                child: CircularProgressIndicator(
+                                  color: AppColors.primary,
+                                ),
+                              ),
+                            ),
               ),
             ),
             Container(
@@ -63,7 +75,7 @@ class CardWidget extends StatelessWidget {
                         title,
                         style: TextStyle(
                           color: AppColors.textPrimary,
-                          fontSize: 17,
+                          fontSize: 14,
                           fontFamily: 'kanit',
                           fontWeight: FontWeight.bold,
                         ),
@@ -104,7 +116,7 @@ class CardWidget extends StatelessWidget {
                       ),
                       SizedBox(width: 10),
                       Text(
-                        price,
+                         '\IDR ${int.parse(price).toStringAsFixed(2)}',
                         style: TextStyle(
                           color: AppColors.textSecondary,
                           fontFamily: 'kanit',

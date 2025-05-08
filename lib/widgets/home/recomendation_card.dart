@@ -111,7 +111,7 @@ class RecomendationCard extends StatelessWidget {
                         const SizedBox(width: 6),
                         Flexible(
                           child: Text(
-                            price,
+                             '\IDR ${int.parse(price).toStringAsFixed(2)}',
                             style: const TextStyle(
                               color: AppColors.textSecondary,
                               fontSize: 14,

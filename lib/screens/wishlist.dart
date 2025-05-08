@@ -21,7 +21,7 @@ class _WishlistPageState extends State<WishlistPage> {
     },
     {
       'key': 'pantai-selatan-yogyakarta',
-      'image': 'assets/images/pantai-selatan.jpg',
+      'image': 'assets/images/banner.jpg',
       'title': 'Pantai Selatan',
       'location': 'Bantul, Yogyakarta',
       'rating': 8.7,
@@ -30,10 +30,11 @@ class _WishlistPageState extends State<WishlistPage> {
 
   @override
   Widget build(BuildContext context) {
+    var wishlistItems2 = wishlistItems;
     return Scaffold(
       backgroundColor: Colors.white,
       body:
-          wishlistItems.isEmpty
+          wishlistItems2.isEmpty
               ? Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -49,7 +50,7 @@ class _WishlistPageState extends State<WishlistPage> {
               )
               : ListView.builder(
                 padding: const EdgeInsets.all(16),
-                itemCount: wishlistItems.length,
+                itemCount: wishlistItems2.length,
                 itemBuilder: (context, index) {
                   final item = wishlistItems[index];
                   return Dismissible(
