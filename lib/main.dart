@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/screens/splash_screen.dart';
-import 'package:forclient_travelapp/screens/wishlist.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 void main() {

@@ -61,9 +61,8 @@ class _HomePageState extends State<HomePage> {
                     itemCount: snapshot.data!.length,
                     itemBuilder: (context, index) {
                       final item = snapshot.data![index];
-                      debugPrint(item.images[0].toString());
                       return Trendingcard(
-                        imageUrl:item.images[0].toString(),
+                        imageUrl: item.images[0].toString(),
                         title: item.nama.toString(),
                         rating: item.rating.toString(),
                         kategori: item.kategori.toString(),
