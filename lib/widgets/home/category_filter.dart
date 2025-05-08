@@ -2,19 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 class CategoryFilter extends StatefulWidget {
-  const CategoryFilter({super.key});
+  final String initialCategory;
+  final Function(String) onCategorySelected;
+
+  const CategoryFilter({
+    required this.initialCategory,
+    required this.onCategorySelected,
+    super.key,
+  });
 
   @override
   State<CategoryFilter> createState() => _CategoryFilterState();
 }
 
 class _CategoryFilterState extends State<CategoryFilter> {
-  String selectedCategory = 'All';
+  late String selectedCategory;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedCategory = widget.initialCategory;
+  }
 
   void selectCategory(String category) {
     setState(() {
       selectedCategory = category;
     });
+    widget.onCategorySelected(category);
   }
 
   @override
@@ -27,10 +41,11 @@ class _CategoryFilterState extends State<CategoryFilter> {
           const Text(
             'Kategori',
             style: TextStyle(
-                fontSize: AppTextSizes.heading2,
-                fontFamily: 'kanit',
-                color: Colors.black,
-                fontWeight: FontWeight.normal),
+              fontSize: AppTextSizes.heading2,
+              fontFamily: 'kanit',
+              color: Colors.black,
+              fontWeight: FontWeight.normal,
+            ),
           ),
           const SizedBox(height: 12),
           SingleChildScrollView(

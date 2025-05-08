@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/model/Wisata.dart';
 import 'package:forclient_travelapp/screens/list_wisata.dart';
 import 'package:forclient_travelapp/screens/wishlist.dart';
 import 'package:forclient_travelapp/service/wisata_service.dart';
@@ -17,6 +18,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String selectedCategory = 'All';
+
   @override
   void initState() {
     super.initState();
@@ -36,7 +39,14 @@ class _HomePageState extends State<HomePage> {
             page: 'home',
           ),
           SizedBox(height: 10),
-          CategoryFilter(),
+          CategoryFilter(
+            initialCategory: selectedCategory,
+            onCategorySelected: (newCategory) {
+              setState(() {
+                selectedCategory = newCategory;
+              });
+            },
+          ),
           HeaderSection(title: "Trending", seeAll: "see all"),
           SizedBox(height: 10),
           FutureBuilder(
@@ -88,7 +98,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 10),
           FutureBuilder(
-            future: getRecomendation(kategori: 'All'),
+            future: getRecomendation(kategori: selectedCategory),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return Center(child: CircularProgressIndicator());
