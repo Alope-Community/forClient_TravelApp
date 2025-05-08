@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:forclient_travelapp/model/wisata.dart';
 
 Future<List<Wisata>> getWisata() async {
-  final String response = await rootBundle.loadString('assets/wisata.json');
+  final String response = await rootBundle.loadString('assets/data/wisata.json');
   final data = await json.decode(response);
   List<Wisata> wisataList = (data as List).map((i) => Wisata.fromJson(i)).toList();
   return wisataList;

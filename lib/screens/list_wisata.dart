@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/screens/home.dart';
 import 'package:forclient_travelapp/screens/wishlist.dart';
+import 'package:forclient_travelapp/service/wisata_service.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 import 'package:forclient_travelapp/widgets/banner.dart';
 import 'package:forclient_travelapp/widgets/list_item/card_widget.dart';
 
-class ListWisata extends StatelessWidget {
+class ListWisata extends StatefulWidget {
   const ListWisata({Key? key}) : super(key: key);
+
+  @override
+  State<ListWisata> createState() => _ListWisataState();
+}
+
+class _ListWisataState extends State<ListWisata> {
+  @override
+  void initState() {
+    super.initState();
+    getWisata();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,40 +33,57 @@ class ListWisata extends StatelessWidget {
           ),
           SizedBox(height: 40),
           Container(
-          padding: EdgeInsets.symmetric(horizontal: 5),
+            padding: EdgeInsets.symmetric(horizontal: 5),
             // padding: const EdgeInsets.symmetric(horizontal: ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                for (int i = 1; i <= 4; i++)
-                  CardWidget(
-                    imageUrl: 'assets/images/pantai-selatan.jpg',
-                    title: 'Pantai Selatan',
-                    kategori: 'Alam',
-                    rating: '4.8',
-                    price: 'Rp.30.000 - Rp.50.000',
-                    onTap: () {
-                      // Aksi saat card di-tap
-                      print('Card $i tapped!');
-                    },
-                  ),
+                FutureBuilder(
+                  future: getWisata(),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return Center(
+                        child: CircularProgressIndicator(
+                          color: AppColors.primary,
+                        ),
+                      );
+                    } else if (snapshot.hasError) {
+                      return Center(child: Text("Terjadi Kesalahan"));
+                    } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                      return Padding(
+                        padding: EdgeInsets.symmetric(vertical: 20),
+                        child: Center(child: Text('Tidak ada data')),
+                      );
+                    } else {
+                      return ListView.builder(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          final item = snapshot.data![index];
+                          return CardWidget(
+                            imageUrl: item.images[0].toString(),
+                            title: item.name.toString(),
+                            rating: item.rating.toString(),
+                            kategori: item.kategori.toString(),
+                            price: item.budjet.toString(),
+                          );
+                        },
+                      );
+                    } // Default return statement
+                  },
+                ),
               ],
             ),
           ),
         ],
       ),
-       bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Whishlist',
@@ -63,7 +92,7 @@ class ListWisata extends StatelessWidget {
         currentIndex: 1,
         selectedItemColor: AppColors.primary,
         onTap: (index) {
-         if (index == 0) {
+          if (index == 0) {
             // Home tapped
             Navigator.push(
               context,
