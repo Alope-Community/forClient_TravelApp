@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/screens/detail.dart';
+import 'package:forclient_travelapp/utils/constant.dart';
 
 class Trendingcard extends StatelessWidget {
   final String imageUrl;
@@ -22,12 +23,17 @@ class Trendingcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onDoubleTap: onTap ?? () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage()));
-      },
+      onDoubleTap:
+          onTap ??
+          () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetailPage()),
+            );
+          },
       child: Container(
         width: 200,
-        margin: const EdgeInsets.only(left: 16, right: 8,),
+        margin: const EdgeInsets.only(left: 16, right: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
@@ -44,12 +50,26 @@ class Trendingcard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
               child: Image.network(
                 imageUrl,
                 width: double.infinity,
                 height: 120,
                 fit: BoxFit.cover,
+                loadingBuilder:
+                    (context, child, loadingProgress) =>
+                        loadingProgress == null
+                            ? child
+                            : SizedBox(
+                              height: 120,
+                              child: Center(
+                                child: CircularProgressIndicator(
+                                  color: AppColors.primary,
+                                ),
+                              ),
+                            ),
               ),
             ),
             Padding(
@@ -68,11 +88,19 @@ class Trendingcard extends StatelessWidget {
                   const SizedBox(height: 6),
                   Row(
                     children: [
-                      const Icon(Icons.star, color: Color(0xFFA6752E), size: 16),
+                      const Icon(
+                        Icons.star,
+                        color: Color(0xFFA6752E),
+                        size: 16,
+                      ),
                       const SizedBox(width: 4),
                       Text(rating),
                       const SizedBox(width: 8),
-                      const Icon(Icons.category, color: Color(0xFFA6752E), size: 16),
+                      const Icon(
+                        Icons.category,
+                        color: Color(0xFFA6752E),
+                        size: 16,
+                      ),
                       const SizedBox(width: 4),
                       Text(kategori),
                     ],
@@ -91,7 +119,7 @@ class Trendingcard extends StatelessWidget {
                       ),
                       const SizedBox(width: 4),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

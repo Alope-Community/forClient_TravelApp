@@ -49,6 +49,18 @@ class RecomendationCard extends StatelessWidget {
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
+                loadingBuilder:
+                    (context, child, loadingProgress) =>
+                        loadingProgress == null
+                            ? child
+                            : SizedBox(
+                              height: 120,
+                              child: Center(
+                                child: CircularProgressIndicator(
+                                  color: AppColors.primary,
+                                ),
+                              ),
+                            ),
               ),
             ),
             Expanded(
@@ -72,7 +84,11 @@ class RecomendationCard extends StatelessWidget {
                     const SizedBox(height: 5),
                     Row(
                       children: [
-                        const Icon(Icons.star, color: AppColors.primary, size: 16),
+                        const Icon(
+                          Icons.star,
+                          color: AppColors.primary,
+                          size: 16,
+                        ),
                         const SizedBox(width: 4),
                         Text(
                           rating,
@@ -87,7 +103,11 @@ class RecomendationCard extends StatelessWidget {
                     const SizedBox(height: 5),
                     Row(
                       children: [
-                        const Icon(Icons.money_rounded, color: AppColors.primary, size: 18),
+                        const Icon(
+                          Icons.money_rounded,
+                          color: AppColors.primary,
+                          size: 18,
+                        ),
                         const SizedBox(width: 6),
                         Flexible(
                           child: Text(
@@ -105,7 +125,11 @@ class RecomendationCard extends StatelessWidget {
                     const SizedBox(height: 5),
                     Row(
                       children: [
-                        const Icon(Icons.category, color: AppColors.primary, size: 18),
+                        const Icon(
+                          Icons.category,
+                          color: AppColors.primary,
+                          size: 18,
+                        ),
                         const SizedBox(width: 6),
                         Flexible(
                           child: Text(
