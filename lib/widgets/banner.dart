@@ -5,12 +5,14 @@ class SearchBanner extends StatelessWidget {
   String imageUrl;
   String title;
   String page;
+  int? titleSize;
 
   SearchBanner({
     super.key,
     required this.imageUrl,
     required this.title,
     required this.page,
+    required this.titleSize
   });
 
   @override
@@ -57,7 +59,7 @@ class SearchBanner extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: titleSize?.toDouble(),
                     fontFamily: 'kanit',
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
@@ -70,12 +72,13 @@ class SearchBanner extends StatelessWidget {
         ),
 
         // Search input mengambang
+        page != "Wistlist" ? 
         const Positioned(
           bottom: -25, // Atur posisi supaya menjorok ke bawah dari image
           left: 24,
           right: 24,
           child: SearchInput(),
-        ),
+        ) : const SizedBox.shrink(), // Jika page adalah "Wistlist", tidak tampilkan SearchInput
       ],
     );
   }

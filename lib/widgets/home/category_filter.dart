@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/service/wisata_service.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 class CategoryFilter extends StatefulWidget {
@@ -38,57 +39,40 @@ class _CategoryFilterState extends State<CategoryFilter> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Kategori',
-            style: TextStyle(
-              fontSize: AppTextSizes.heading2,
-              fontFamily: 'kanit',
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
-            ),
-          ),
           const SizedBox(height: 12),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                _CategoryChip(
-                  icon: Icons.all_inclusive,
-                  label: 'All',
-                  selected: selectedCategory == 'All',
-                  onTap: () => selectCategory('All'),
-                ),
-                const SizedBox(width: 10),
-                _CategoryChip(
-                  icon: Icons.location_city,
-                  label: 'Perkotaan',
-                  selected: selectedCategory == 'Perkotaan',
-                  onTap: () => selectCategory('Perkotaan'),
-                ),
-                const SizedBox(width: 10),
-                _CategoryChip(
-                  icon: Icons.park,
-                  label: 'Alam',
-                  selected: selectedCategory == 'Alam',
-                  onTap: () => selectCategory('Alam'),
-                ),
-                const SizedBox(width: 10),
-                _CategoryChip(
-                  icon: Icons.restaurant,
-                  label: 'Kuliner',
-                  selected: selectedCategory == 'Kuliner',
-                  onTap: () => selectCategory('Kuliner'),
-                ),
-                const SizedBox(width: 10),
-                _CategoryChip(
-                  icon: Icons.theater_comedy,
-                  label: 'Kesenian',
-                  selected: selectedCategory == 'Kesenian',
-                  onTap: () => selectCategory('Kesenian'),
-                ),
-                const SizedBox(width: 10),
-              ],
-            ),
+          FutureBuilder<List<String>>(
+            future: getKategoriList(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: CircularProgressIndicator(color: AppColors.primary),
+                );
+              } else if (snapshot.hasError) {
+                return Center(child: Text("Terjadi Kesalahan"));
+              } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                return Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: Center(child: Text('Tidak ada data')),
+                );
+              } else {
+                final kategoriList = snapshot.data!;
+                return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: kategoriList.map((kategori) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: _CategoryChip(
+                          label: kategori,
+                          selected: selectedCategory == kategori,
+                          onTap: () => selectCategory(kategori),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                );
+              }
+            },
           ),
         ],
       ),
@@ -97,13 +81,11 @@ class _CategoryFilterState extends State<CategoryFilter> {
 }
 
 class _CategoryChip extends StatelessWidget {
-  final IconData icon;
   final String label;
   final bool selected;
   final VoidCallback onTap;
 
   const _CategoryChip({
-    required this.icon,
     required this.label,
     required this.selected,
     required this.onTap,
@@ -116,28 +98,11 @@ class _CategoryChip extends StatelessWidget {
       child: Chip(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         backgroundColor: selected ? AppColors.primary : Colors.white,
-        label: Row(
-          spacing: 10,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, color: selected ? Colors.white : AppColors.primary),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  left: BorderSide(
-                    color: selected ? Colors.white : AppColors.primary,
-                    width: 2,
-                  ),
-                ),
-              ),
-            ),
-            Text(
-              label,
-              style: AppTextStyles.small.copyWith(
-                color: selected ? Colors.white : AppColors.primary,
-              ),
-            ),
-          ],
+        label: Text(
+          label,
+          style: AppTextStyles.small.copyWith(
+            color: selected ? Colors.white : AppColors.primary,
+          ),
         ),
         shape: StadiumBorder(
           side: BorderSide(color: AppColors.primary, width: 2),

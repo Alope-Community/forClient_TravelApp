@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
           SearchBanner(
             imageUrl: 'assets/images/banner.jpg',
             title: 'Kemana Kamu\nIngin Pergi?',
+            titleSize: 35,
             page: 'home',
           ),
           SizedBox(height: 10),
@@ -49,7 +50,7 @@ class _HomePageState extends State<HomePage> {
           HeaderSection(title: "Trending", seeAll: "see all"),
           SizedBox(height: 10),
           FutureBuilder(
-            future: getTrending(kategori: "All"),
+            future: getTrending(kategori: selectedCategory),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return Center(
@@ -135,7 +136,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Wishlist',
+            label: 'Wistlist',
           ),
         ],
         currentIndex: 0,

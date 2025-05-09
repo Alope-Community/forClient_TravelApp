@@ -59,3 +59,21 @@ Future<List<Wisata>> getTrending({required String kategori}) async {
 
   return tredingItem;
 }
+
+Future<List<String>> getKategoriList() async {
+  final String response = await rootBundle.loadString('assets/data/wisata.json');
+  final data = await json.decode(response);
+  List<Wisata> wisataList = (data as List).map((i) => Wisata.fromJson(i)).toList();
+
+  // Ambil semua kategori, hapus null dan duplikat, lalu urutkan
+  final kategoriSet = <String>{};
+  for (var w in wisataList) {
+    if (w.kategori != null) {
+      kategoriSet.add(w.kategori!);
+    }
+  }
+
+  // Ubah menjadi List dan tambahkan opsi 'All' di awal
+  final kategoriList = ['All', ...kategoriSet.toList()..sort()];
+  return kategoriList;
+}

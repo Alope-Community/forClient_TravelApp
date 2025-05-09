@@ -29,6 +29,7 @@ class _ListWisataState extends State<ListWisata> {
           SearchBanner(
             imageUrl: 'assets/images/banner2.jpg',
             title: 'Berikut List\nWisata',
+            titleSize: 35,
             page: 'listWisata',
           ),
           SizedBox(height: 40),
@@ -86,7 +87,7 @@ class _ListWisataState extends State<ListWisata> {
           BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Whishlist',
+            label: 'Wistlist',
           ),
         ],
         currentIndex: 1,
