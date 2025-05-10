@@ -2,12 +2,28 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:forclient_travelapp/models/destination.dart';
 
-Future<List<Destination>> getDestinations() async {
-  final String response = await rootBundle.loadString(
-    'assets/data/destinations.json',
-  );
-  final data = json.decode(response);
-  return (data as List).map((item) => Destination.fromJson(item)).toList();
+Future<List<Destination>> getDestinations({
+  String? query,
+  String? filter,
+}) async {
+  final String response = await rootBundle.loadString('assets/data/destinations.json');
+  final List<dynamic> data = json.decode(response);
+  List<Destination> destinations = data.map((item) => Destination.fromJson(item)).toList();
+
+  if (query != null && query.isNotEmpty) {
+    destinations = destinations.where((destination) {
+      final name = destination.name?.toLowerCase() ?? '';
+      return name.contains(query.toLowerCase());
+    }).toList();
+  }
+
+  if (filter == 'rating') {
+    destinations.sort((a, b) => (b.rating ?? 0).compareTo(a.rating ?? 0));
+  } else if (filter == 'price') {
+    destinations.sort((a, b) => (a.budget).compareTo(b.budget));
+  }
+
+  return destinations;
 }
 
 Future<List<Destination>> getRecommendations({
@@ -28,10 +44,10 @@ Future<List<Destination>> getRecommendations({
   return destinations.where((destination) {
     final suitability = destination.visitingTime?[timeSegment] ?? 0;
 
-    final matchCategory =
-        category == "All" || destination.category == category;
+    final matchCategory = category == "All" || destination.category == category;
 
-    final matchQuery = query == null ||
+    final matchQuery =
+        query == null ||
         query.isEmpty ||
         destination.name!.toLowerCase().contains(query.toLowerCase());
 
@@ -53,13 +69,12 @@ Future<List<Destination>> getTrendingDestinations({
   }
 
   return destinations.where((destination) {
-    final isHighRated =
-        destination.rating != null && destination.rating! > 4.3;
+    final isHighRated = destination.rating != null && destination.rating! > 4.3;
 
-    final matchCategory =
-        category == "All" || destination.category == category;
+    final matchCategory = category == "All" || destination.category == category;
 
-    final matchQuery = query == null ||
+    final matchQuery =
+        query == null ||
         query.isEmpty ||
         destination.name!.toLowerCase().contains(query.toLowerCase());
 

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/services/destination.dart';
-import 'package:forclient_travelapp/utils/constant.dart';
 import 'package:forclient_travelapp/widgets/banner.dart';
 import 'package:forclient_travelapp/widgets/bottom_navbar.dart';
 import 'package:forclient_travelapp/widgets/list_category_chip.dart';
 import 'package:forclient_travelapp/widgets/list_destination_preview.dart';
 import 'package:forclient_travelapp/widgets/recomendation_header.dart';
 import 'package:forclient_travelapp/widgets/trending_header.dart';
-import 'package:forclient_travelapp/widgets/modal_bottom_filter.dart';
+import 'package:forclient_travelapp/widgets/search_field.dart';
+import 'package:forclient_travelapp/widgets/filter_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -46,72 +46,32 @@ class _HomePageState extends State<HomePage> {
                     spacing: 8,
                     children: [
                       Expanded(
-                        child: SearchBar(
-                          controller: queryController,
+                        child: SearchField(
+                          queryController: queryController,
+                          onChanged: (value) {
+                            setState(() {
+                              queryController.text = value;
+                            });
+                          },
                           onSubmitted: (value) {
                             setState(() {
                               queryController.text = value;
                             });
                           },
-                          backgroundColor: WidgetStatePropertyAll(Colors.white),
-                          shape: WidgetStateProperty.all(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(8),
-                              ),
-                            ),
-                          ),
-                          leading: Icon(Icons.search_rounded),
-                          hintText: 'Cari Tempat Wisata',
-                          hintStyle: WidgetStateProperty.all(
-                            AppTextStyles.body.copyWith(
-                              fontWeight: FontWeight.w500,
-                              color: Colors.grey.shade500,
-                            ),
-                          ),
+                          onReset: () {
+                            setState(() {
+                              queryController.text = '';
+                            });
+                          },
                         ),
                       ),
-                      GestureDetector(
-                        onTap:
-                            () => {
-                              showModalBottomSheet(
-                                context: context,
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.vertical(
-                                    top: Radius.circular(20),
-                                  ),
-                                ),
-                                builder: (context) {
-                                  return ModalBottomFilter(
-                                    selectedFilter: selectedFilter,
-                                    onSelectedFilter: (filter) {
-                                      setState(() {
-                                        selectedFilter = filter;
-                                      });
-                                    },
-                                  );
-                                },
-                              ),
-                            },
-                        child: Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(alpha: .2),
-                                blurRadius: 8,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: const Icon(
-                            Icons.tune,
-                            color: AppColors.primary,
-                          ),
-                        ),
+                      FilterButton(
+                        selectedFilter: selectedFilter,
+                        onSelectedFilter: (filter) {
+                          setState(() {
+                            selectedFilter = filter;
+                          });
+                        },
                       ),
                     ],
                   ),

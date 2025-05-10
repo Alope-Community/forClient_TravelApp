@@ -43,27 +43,38 @@ class _CategoryFilterState extends State<CategoryFilter> {
             future: getCategoryList(),
             builder: (context, snapshot) {
               if (snapshot.hasError) {
-                return Center(child: Text("Terjadi Kesalahan"));
+                return Center(
+                  child: Text(
+                    "Terjadi Kesalahan 😓",
+                    style: AppTextStyles.small,
+                  ),
+                );
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                 return Padding(
                   padding: EdgeInsets.symmetric(vertical: 20),
-                  child: Center(child: Text('Tidak ada data')),
+                  child: Center(
+                    child: Text(
+                      'Tidak ada data 😔',
+                      style: AppTextStyles.small,
+                    ),
+                  ),
                 );
               } else {
                 final kategoriList = snapshot.data!;
                 return SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: kategoriList.map((kategori) {
-                      return Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: _CategoryChip(
-                          label: kategori,
-                          selected: selectedCategory == kategori,
-                          onTap: () => selectCategory(kategori),
-                        ),
-                      );
-                    }).toList(),
+                    children:
+                        kategoriList.map((kategori) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: _CategoryChip(
+                              label: kategori,
+                              selected: selectedCategory == kategori,
+                              onTap: () => selectCategory(kategori),
+                            ),
+                          );
+                        }).toList(),
                   ),
                 );
               }
