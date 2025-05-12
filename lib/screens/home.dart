@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:forclient_travelapp/screens/list_wisata.dart';
 import 'package:forclient_travelapp/screens/wishlist.dart';
 import 'package:forclient_travelapp/service/wisata_service.dart';
@@ -8,6 +9,17 @@ import 'package:forclient_travelapp/widgets/home/recomendation_card.dart';
 import 'package:forclient_travelapp/widgets/home/trending_card.dart';
 import '../widgets/home/category_filter.dart';
 import '../widgets/banner.dart';
+=======
+import 'package:forclient_travelapp/services/destination.dart';
+import 'package:forclient_travelapp/widgets/banner.dart';
+import 'package:forclient_travelapp/widgets/bottom_navbar.dart';
+import 'package:forclient_travelapp/widgets/list_category_chip.dart';
+import 'package:forclient_travelapp/widgets/list_destination_preview.dart';
+import 'package:forclient_travelapp/widgets/recomendation_header.dart';
+import 'package:forclient_travelapp/widgets/trending_header.dart';
+import 'package:forclient_travelapp/widgets/search_field.dart';
+import 'package:forclient_travelapp/widgets/filter_button.dart';
+>>>>>>> 7020aacdfa8c9d4c1b8b8509939c44fd76f94313
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,6 +30,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String selectedCategory = 'All';
+<<<<<<< HEAD
 
   @override
   void initState() {
@@ -25,20 +38,80 @@ class _HomePageState extends State<HomePage> {
     getRecomendation(kategori: "All");
     getTrending(kategori: "All");
   }
+=======
+  String selectedFilter = 'none';
+  TextEditingController queryController = TextEditingController();
+>>>>>>> 7020aacdfa8c9d4c1b8b8509939c44fd76f94313
 
   @override
   Widget build(BuildContext context) {
-    var scaffold = Scaffold(
+    return Scaffold(
+      bottomNavigationBar: BottomNavbar(currentIndex: 0),
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
+<<<<<<< HEAD
           SearchBanner(
             imageUrl: 'assets/images/banner.jpg',
             title: 'Kemana Kamu\nIngin Pergi?',
             titleSize: 35,
             page: 'home',
+=======
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              BannerHeader(
+                imageUrl: 'assets/images/banner-home.jpg',
+                title: 'Kemana Kamu\nIngin Pergi?',
+              ),
+
+              Positioned(
+                bottom: -25,
+                left: 16,
+                right: 16,
+                child: SizedBox(
+                  height: 50,
+                  child: Row(
+                    spacing: 8,
+                    children: [
+                      Expanded(
+                        child: SearchField(
+                          queryController: queryController,
+                          onChanged: (value) {
+                            setState(() {
+                              queryController.text = value;
+                            });
+                          },
+                          onSubmitted: (value) {
+                            setState(() {
+                              queryController.text = value;
+                            });
+                          },
+                          onReset: () {
+                            setState(() {
+                              queryController.text = '';
+                            });
+                          },
+                        ),
+                      ),
+                      FilterButton(
+                        selectedFilter: selectedFilter,
+                        onSelectedFilter: (filter) {
+                          setState(() {
+                            selectedFilter = filter;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+>>>>>>> 7020aacdfa8c9d4c1b8b8509939c44fd76f94313
           ),
-          SizedBox(height: 10),
+
+          SizedBox(height: 40),
+
           CategoryFilter(
             initialCategory: selectedCategory,
             onCategorySelected: (newCategory) {
@@ -47,6 +120,7 @@ class _HomePageState extends State<HomePage> {
               });
             },
           ),
+<<<<<<< HEAD
           HeaderSection(title: "Trending", seeAll: "see all"),
           SizedBox(height: 10),
           FutureBuilder(
@@ -79,21 +153,32 @@ class _HomePageState extends State<HomePage> {
                         price: item.budget.toString(),
                       );
                     },
+=======
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Column(
+              children: [
+                TrendingHeader(),
+                ListDestinationPreview(
+                  selectedCategory: selectedCategory,
+                  future: getTrendingDestinations(
+                    category: selectedCategory,
+                    query: queryController.text,
+                    filter: selectedFilter,
+>>>>>>> 7020aacdfa8c9d4c1b8b8509939c44fd76f94313
                   ),
-                );
-              }
-            },
-          ),
-          SizedBox(height: 15),
-          HeaderSection(
-            seeAll: "see all",
-            title: "Recomendation",
-            onSeeAllPressed:
-                () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ListWisata()),
+                  isRecomendation: false,
+                ),
+                RecomendationHeader(),
+                ListDestinationPreview(
+                  selectedCategory: selectedCategory,
+                  future: getRecommendations(
+                    category: selectedCategory,
+                    query: queryController.text,
+                    filter: selectedFilter,
                   ),
+<<<<<<< HEAD
                 },
           ),
           SizedBox(height: 10),
@@ -137,27 +222,15 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Wistlist',
+=======
+                  isRecomendation: true,
+                ),
+              ],
+            ),
+>>>>>>> 7020aacdfa8c9d4c1b8b8509939c44fd76f94313
           ),
         ],
-        currentIndex: 0,
-        selectedItemColor: AppColors.primary,
-        onTap: (index) {
-          if (index == 0) {
-            // Explro Tapped
-          } else if (index == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ListWisata()),
-            );
-          } else if (index == 2) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => WishlistPage()),
-            );
-          }
-        },
       ),
     );
-    return scaffold;
   }
 }

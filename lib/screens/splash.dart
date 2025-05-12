@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/screens/home.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/bank_indonesia.jpg'),
+            image: AssetImage('assets/images/bg-splash.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -30,25 +30,20 @@ class SplashScreen extends StatelessWidget {
                   style: AppTextStyles.heading2,
                 ),
                 SizedBox(height: 20),
-                ElevatedButton(
+                OutlinedButton(
                   onPressed:
                       () => {
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context) => HomePage()),
                         ),
                       },
-                  style: AppButtonStyles.elevatedButtonPrimary,
+                  style: AppButtonStyles.outlinedButtonPrimary,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     spacing: 10,
                     children: [
                       Text('Jelajahi Sekarang!'),
-                      Icon(
-                        Icons.arrow_forward_rounded,
-                        size: 24.0,
-                        semanticLabel:
-                            'Text to announce in accessibility modes',
-                      ),
+                      Icon(Icons.arrow_forward_rounded, size: 24.0),
                     ],
                   ),
                 ),

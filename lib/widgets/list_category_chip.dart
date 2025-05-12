@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/service/wisata_service.dart';
+import 'package:forclient_travelapp/services/destination.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 class CategoryFilter extends StatefulWidget {
@@ -35,40 +35,46 @@ class _CategoryFilterState extends State<CategoryFilter> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 12),
           FutureBuilder<List<String>>(
-            future: getKategoriList(),
+            future: getCategoryList(),
             builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
+              if (snapshot.hasError) {
                 return Center(
-                  child: CircularProgressIndicator(color: AppColors.primary),
+                  child: Text(
+                    "Terjadi Kesalahan 😓",
+                    style: AppTextStyles.small,
+                  ),
                 );
-              } else if (snapshot.hasError) {
-                return Center(child: Text("Terjadi Kesalahan"));
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                 return Padding(
                   padding: EdgeInsets.symmetric(vertical: 20),
-                  child: Center(child: Text('Tidak ada data')),
+                  child: Center(
+                    child: Text(
+                      'Tidak ada data 😔',
+                      style: AppTextStyles.small,
+                    ),
+                  ),
                 );
               } else {
                 final kategoriList = snapshot.data!;
                 return SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: kategoriList.map((kategori) {
-                      return Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: _CategoryChip(
-                          label: kategori,
-                          selected: selectedCategory == kategori,
-                          onTap: () => selectCategory(kategori),
-                        ),
-                      );
-                    }).toList(),
+                    children:
+                        kategoriList.map((kategori) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: _CategoryChip(
+                              label: kategori,
+                              selected: selectedCategory == kategori,
+                              onTap: () => selectCategory(kategori),
+                            ),
+                          );
+                        }).toList(),
                   ),
                 );
               }

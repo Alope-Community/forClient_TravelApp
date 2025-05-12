@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/widgets/search_input.dart';
+import 'package:forclient_travelapp/utils/constant.dart';
 
-class SearchBanner extends StatelessWidget {
-  String imageUrl;
-  String title;
-  String page;
-  int? titleSize;
+class BannerHeader extends StatelessWidget {
+  final String imageUrl;
+  final String title;
+  final TextStyle? titleStyle;
 
-  SearchBanner({
+  const BannerHeader({
     super.key,
     required this.imageUrl,
     required this.title,
-    required this.page,
-    required this.titleSize
+    this.titleStyle,
   });
 
   @override
   Widget build(BuildContext context) {
     return Stack(
-      clipBehavior: Clip.none,
       children: [
-        // Gambar background
         Container(
           decoration: BoxDecoration(
             boxShadow: [
@@ -36,49 +32,41 @@ class SearchBanner extends StatelessWidget {
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
             ),
-            child: Image.asset(
-              imageUrl,
-              width: double.infinity,
-              color: Colors.black45,
-              colorBlendMode: BlendMode.darken,
-              height: 300,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-
-        // Tulisan di tengah
-        Positioned.fill(
-          child: Container(
-            alignment: Alignment.center,
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+            child: Stack(
               children: [
-                Text(
-                  title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: titleSize?.toDouble(),
-                    fontFamily: 'kanit',
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
+                Image.asset(
+                  imageUrl,
+                  width: double.infinity,
+                  height: 300,
+                  fit: BoxFit.cover,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 300,
+                  color: Colors.black.withValues(
+                    alpha: .5,
                   ),
                 ),
-                SizedBox(height: 60),
               ],
             ),
           ),
         ),
 
-        // Search input mengambang
-        page != "Wistlist" ? 
-        const Positioned(
-          bottom: -25, // Atur posisi supaya menjorok ke bawah dari image
-          left: 24,
-          right: 24,
-          child: SearchInput(),
-        ) : const SizedBox.shrink(), // Jika page adalah "Wistlist", tidak tampilkan SearchInput
+        Positioned.fill(
+          child: Container(
+            alignment: Alignment.center,
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style:
+                  titleStyle ??
+                  AppTextStyles.heading1.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+            ),
+          ),
+        ),
       ],
     );
   }

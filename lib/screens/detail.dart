@@ -1,10 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:forclient_travelapp/models/destination.dart';
 import 'package:forclient_travelapp/utils/constant.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({super.key});
+  final Destination destination;
+
+  const DetailPage({required this.destination, super.key});
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -19,7 +22,7 @@ class _DetailPageState extends State<DetailPage> {
   void initState() {
     super.initState();
     _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (_currentPage < imageList.length) {
+      if (_currentPage < widget.destination.images.length) {
         _pageController.animateToPage(
           _currentPage,
           duration: Duration(milliseconds: 350),
@@ -38,11 +41,11 @@ class _DetailPageState extends State<DetailPage> {
     _timer?.cancel();
   }
 
-  final List<String> imageList = [
-    'assets/images/bank_indonesia.jpg',
-    'assets/images/banner.jpg',
-    'assets/images/pantai-selatan.jpg',
-  ];
+  // final List<String> imageList = [
+  //   'assets/images/banner-explore.jpg',
+  //   'assets/images/banner-wishlist.jpg',
+  //   'assets/images/banner-home.jpg',
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -58,18 +61,25 @@ class _DetailPageState extends State<DetailPage> {
                   children: [
                     PageView.builder(
                       controller: _pageController,
-                      itemCount: imageList.length,
+                      itemCount: widget.destination.images.length,
                       onPageChanged: (index) {
                         setState(() => _currentPage = index);
                       },
                       itemBuilder: (_, index) {
-                        return Image.asset(
-                          imageList[index],
-                          width: double.infinity,
-                          height: 250,
-                          fit: BoxFit.cover,
-                          color: Colors.black26,
-                          colorBlendMode: BlendMode.darken,
+                        return Stack(
+                          children: [
+                            Image.asset(
+                              widget.destination.images[index],
+                              width: double.infinity,
+                              height: 250,
+                              fit: BoxFit.cover,
+                            ),
+                            Container(
+                              width: double.infinity,
+                              height: 300,
+                              color: Colors.black.withValues(alpha: .2),
+                            ),
+                          ],
                         );
                       },
                     ),
@@ -106,15 +116,6 @@ class _DetailPageState extends State<DetailPage> {
                   ],
                 ),
               ),
-              SafeArea(
-                child: Positioned(
-                  left: 12,
-                  child: IconButton(
-                    icon: const Icon(Icons.arrow_back, color: Colors.white),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                ),
-              ),
             ],
           ),
 
@@ -123,20 +124,18 @@ class _DetailPageState extends State<DetailPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
-                imageList.length,
+                widget.destination.images.length,
                 (index) => _buildIndicator(index),
               ),
             ),
           ),
 
-          // === CONTENT ===
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Card Utama
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
@@ -151,7 +150,7 @@ class _DetailPageState extends State<DetailPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'HEHA Ocean View',
+                              widget.destination.name!,
                               style: AppTextStyles.heading2.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -164,7 +163,7 @@ class _DetailPageState extends State<DetailPage> {
                                   color: Colors.amber,
                                 ),
                                 Text(
-                                  '9/10',
+                                  widget.destination.rating.toString(),
                                   style: AppTextStyles.small.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.amber,
@@ -176,14 +175,14 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                         Row(
                           spacing: 5,
-                          children: const [
+                          children: [
                             Icon(
                               Icons.location_on,
                               size: 18,
                               color: AppColors.primary,
                             ),
                             Text(
-                              'Kabupaten Gunungkidul, DI Yogyakarta',
+                              widget.destination.location,
                               style: AppTextStyles.small,
                             ),
                           ],
@@ -210,7 +209,6 @@ class _DetailPageState extends State<DetailPage> {
                   ),
                   const SizedBox(height: 24),
 
-                  // Review
                   const Text('Review', style: AppTextStyles.heading2),
                   const SizedBox(height: 12),
                   _buildReview(
