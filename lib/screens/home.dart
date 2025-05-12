@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:forclient_travelapp/model/Wisata.dart';
-import 'package:forclient_travelapp/screens/list_wisata.dart';
-import 'package:forclient_travelapp/screens/wishlist.dart';
-import 'package:forclient_travelapp/service/wisata_service.dart';
-import 'package:forclient_travelapp/utils/constant.dart';
-import 'package:forclient_travelapp/widgets/home/header_section.dart';
-import 'package:forclient_travelapp/widgets/home/recomendation_card.dart';
-import 'package:forclient_travelapp/widgets/home/trending_card.dart';
-import '../widgets/home/category_filter.dart';
-import '../widgets/banner.dart';
+import 'package:forclient_travelapp/services/destination.dart';
+import 'package:forclient_travelapp/widgets/banner.dart';
+import 'package:forclient_travelapp/widgets/bottom_navbar.dart';
+import 'package:forclient_travelapp/widgets/list_category_chip.dart';
+import 'package:forclient_travelapp/widgets/list_destination_preview.dart';
+import 'package:forclient_travelapp/widgets/recomendation_header.dart';
+import 'package:forclient_travelapp/widgets/trending_header.dart';
+import 'package:forclient_travelapp/widgets/search_field.dart';
+import 'package:forclient_travelapp/widgets/filter_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,26 +18,70 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String selectedCategory = 'All';
-
-  @override
-  void initState() {
-    super.initState();
-    getRecomendation(kategori: "All");
-    getTrending(kategori: "all");
-  }
+  String selectedFilter = 'none';
+  TextEditingController queryController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    var scaffold = Scaffold(
+    return Scaffold(
+      bottomNavigationBar: BottomNavbar(currentIndex: 0),
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          SearchBanner(
-            imageUrl: 'assets/images/banner.jpg',
-            title: 'Kemana Kamu\nIngin Pergi?',
-            page: 'home',
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              BannerHeader(
+                imageUrl: 'assets/images/banner-home.jpg',
+                title: 'Kemana Kamu\nIngin Pergi?',
+              ),
+
+              Positioned(
+                bottom: -25,
+                left: 16,
+                right: 16,
+                child: SizedBox(
+                  height: 50,
+                  child: Row(
+                    spacing: 8,
+                    children: [
+                      Expanded(
+                        child: SearchField(
+                          queryController: queryController,
+                          onChanged: (value) {
+                            setState(() {
+                              queryController.text = value;
+                            });
+                          },
+                          onSubmitted: (value) {
+                            setState(() {
+                              queryController.text = value;
+                            });
+                          },
+                          onReset: () {
+                            setState(() {
+                              queryController.text = '';
+                            });
+                          },
+                        ),
+                      ),
+                      FilterButton(
+                        selectedFilter: selectedFilter,
+                        onSelectedFilter: (filter) {
+                          setState(() {
+                            selectedFilter = filter;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-          SizedBox(height: 10),
+
+          SizedBox(height: 40),
+
           CategoryFilter(
             initialCategory: selectedCategory,
             onCategorySelected: (newCategory) {
@@ -47,117 +90,36 @@ class _HomePageState extends State<HomePage> {
               });
             },
           ),
-          HeaderSection(title: "Trending", seeAll: "see all"),
-          SizedBox(height: 10),
-          FutureBuilder(
-            future: getTrending(kategori: "All"),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
-                  child: CircularProgressIndicator(color: AppColors.primary),
-                );
-              } else if (snapshot.hasError) {
-                return Center(child: Text("Terjadi Kesalahan"));
-              } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  child: Center(child: Text('Tidak ada data')),
-                );
-              } else {
-                return SizedBox(
-                  height: 220,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: snapshot.data!.length,
-                    itemBuilder: (context, index) {
-                      final item = snapshot.data![index];
-                      return Trendingcard(
-                        imageUrl: item.images[0].toString(),
-                        title: item.nama.toString(),
-                        rating: item.rating.toString(),
-                        kategori: item.kategori.toString(),
-                        price: item.budget.toString(),
-                      );
-                    },
+
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Column(
+              children: [
+                TrendingHeader(),
+                ListDestinationPreview(
+                  selectedCategory: selectedCategory,
+                  future: getTrendingDestinations(
+                    category: selectedCategory,
+                    query: queryController.text,
+                    filter: selectedFilter,
                   ),
-                );
-              }
-            },
-          ),
-          SizedBox(height: 15),
-          HeaderSection(
-            seeAll: "see all",
-            title: "Recomendation",
-            onSeeAllPressed:
-                () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ListWisata()),
+                  isRecomendation: false,
+                ),
+                RecomendationHeader(),
+                ListDestinationPreview(
+                  selectedCategory: selectedCategory,
+                  future: getRecommendations(
+                    category: selectedCategory,
+                    query: queryController.text,
+                    filter: selectedFilter,
                   ),
-                },
-          ),
-          SizedBox(height: 10),
-          FutureBuilder(
-            future: getRecomendation(kategori: selectedCategory),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(child: CircularProgressIndicator());
-              } else if (snapshot.hasError) {
-                return Center(child: Text('Terjadi kesalahan'));
-              } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return Center(child: Text('Tidak ada data'));
-              } else {
-                return ListView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: snapshot.data!.length,
-                  itemBuilder: (context, index) {
-                    final item = snapshot.data![index];
-                    return RecomendationCard(
-                      imageUrl: item.images[0].toString(),
-                      title: item.nama.toString(),
-                      rating: item.rating.toString(),
-                      kategori: item.kategori.toString(),
-                      price: item.budget.toString(),
-                    );
-                  },
-                );
-              }
-            },
-          ),
-          SizedBox(height: 1),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.explore), label: 'Explore'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Wishlist',
+                  isRecomendation: true,
+                ),
+              ],
+            ),
           ),
         ],
-        currentIndex: 0,
-        selectedItemColor: AppColors.primary,
-        onTap: (index) {
-          if (index == 0) {
-            // Explro Tapped
-          } else if (index == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ListWisata()),
-            );
-          } else if (index == 2) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => WishlistPage()),
-            );
-          }
-        },
       ),
     );
-    return scaffold;
   }
 }

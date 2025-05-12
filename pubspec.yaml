@@ -24,17 +24,17 @@ flutter_icons:
   image_path: "assets/images/logo.png"
 
 flutter:
+
   uses-material-design: true
 
   assets:
-    # Images 
-    - assets/images/banner.jpg
-    - assets/images/bank_indonesia.jpg
-    - assets/images/banner2.jpg
+    - assets/images/bg-splash.jpg
+    - assets/images/banner-home.jpg
+    - assets/images/banner-explore.jpg
+    - assets/images/banner-wishlist.jpg
     - assets/images/logo.png
 
-    # Json files
-    - assets/data/wisata.json
+    - assets/data/destinations.json
 
   fonts:
     - family: Kanit
