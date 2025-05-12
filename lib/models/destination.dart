@@ -10,6 +10,7 @@ class Destination {
   String location;
   List<dynamic> images;
   double? rating;
+  String description;
 
   Destination({
     required this.id,
@@ -23,12 +24,14 @@ class Destination {
     required this.location,
     required this.images,
     required this.rating,
+    required this.description
   });
 
   factory Destination.fromJson(Map<String, dynamic> json) {
     return Destination(
       id: json['id'] as int,
       name: json['nama'] as String?,
+      description: json['description'] as String? ?? '',
       rating: json['rating'] as double?,
       subCategories: json['subKategori'] != null
           ? List<String?>.from(json['subKategori'])
