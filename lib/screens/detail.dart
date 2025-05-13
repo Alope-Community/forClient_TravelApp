@@ -186,19 +186,33 @@ class _DetailPageState extends State<DetailPage> {
                           widget.destination.description,
                           style: AppTextStyles.body,
                         ),
-                        const SizedBox(height: 16),
+                        const SizedBox(height: 5),
                         const Text('Keunggulan', style: AppTextStyles.body),
                         Wrap(
                           spacing: 8,
                           runSpacing: 8,
-                          children: List.generate(
-                          widget.destination.accessibility!.length,
-                          (index) {
-                            final accesbility = widget.destination.accessibility?[index];
-                            debugPrint(accesbility.toString());
-                            return _buildTag(Icons.label, accesbility.toString());
-                          },
-                          ),
+                          children:
+                              widget.destination.accessibility!.keys
+                                  .where(
+                                    (key) => key != 'total_skor',
+                                  ) // untuk mengecualikan 'total_skor'
+                                  .map((key) => _buildTag(Icons.label, key))
+                                  .toList(),
+                        ),
+                        const Text(
+                          'Rekomendasi Untuk',
+                          style: AppTextStyles.body,
+                        ),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children:
+                              widget.destination.recommendedFor!.keys
+                                  .where(
+                                    (key) => key != 'total_skor',
+                                  ) // untuk mengecualikan 'total_skor'
+                                  .map((key) => _buildTag(Icons.label, key))
+                                  .toList(),
                         ),
                       ],
                     ),
@@ -207,12 +221,20 @@ class _DetailPageState extends State<DetailPage> {
 
                   const Text('Review', style: AppTextStyles.heading2),
                   const SizedBox(height: 12),
-                  _buildReview(
-                    name: 'Akbar',
-                    rating: '9/10',
-                    comment:
-                        widget.destination.description
-                  ),
+                  if (widget.destination.ulasan != null &&
+                      widget.destination.ulasan!.isNotEmpty)
+                    ...widget.destination.ulasan!.map<Widget>((ulasan) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: _buildReview(
+                          name: ulasan.nama ?? 'Anonim',
+                          rating: ulasan.rating.toString() ?? '0/10',
+                          comment: ulasan.komentar ?? '',
+                        ),
+                      );
+                    }).toList()
+                  else
+                    const Text('Belum ada ulasan.', style: AppTextStyles.small),
                 ],
               ),
             ),
@@ -279,7 +301,7 @@ class _DetailPageState extends State<DetailPage> {
                         Icon(Icons.star, color: Colors.amber, size: 16),
                         SizedBox(width: 2),
                         Text(
-                          "9/10",
+                         rating,
                           style: AppTextStyles.small.copyWith(
                             color: Colors.amber,
                             fontWeight: FontWeight.bold,
