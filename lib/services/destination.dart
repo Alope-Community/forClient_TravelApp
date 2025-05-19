@@ -25,6 +25,20 @@ Future<List<Destination>> getDestinations({
     destinations.sort((a, b) => (b.rating ?? 0).compareTo(a.rating ?? 0));
   } else if (filter == 'price') {
     destinations.sort((a, b) => (a.budget).compareTo(b.budget));
+  } else if (filter == 'alam') {
+    destinations = destinations
+        .where(
+          (destination) =>
+              destination.subCategories?.contains('Wisata Alam') ?? false,
+        )
+        .toList();
+  } else if (filter == 'kota') {
+    destinations = destinations
+        .where(
+          (destination) =>
+              destination.subCategories?.contains('Wisata Kota') ?? false,
+        )
+        .toList();
   }
 
   return destinations;
