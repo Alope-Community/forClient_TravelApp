@@ -32,6 +32,18 @@ class ModalBottomFilter extends StatelessWidget {
             label: 'Harga Terjangkau',
             filter: 'price',
           ),
+          _buildFilterTile(
+            context,
+            icon: Icons.location_city,
+            label: 'Wisata Kota',
+            filter: 'kota',
+          ),
+          _buildFilterTile(
+            context,
+            icon: Icons.terrain,
+            label: 'Wisata Alam',
+            filter: 'alam',
+          ),
         ],
       ),
     );
