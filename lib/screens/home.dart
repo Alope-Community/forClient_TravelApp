@@ -1,3 +1,5 @@
+import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
+
 import 'package:flutter/material.dart';
 import 'package:forclient_travelapp/services/destination.dart';
 import 'package:forclient_travelapp/widgets/banner.dart';
@@ -16,10 +18,14 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+
+
 class _HomePageState extends State<HomePage> {
   String selectedCategory = 'All';
   String selectedFilter = 'none';
   TextEditingController queryController = TextEditingController();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -112,6 +118,8 @@ class _HomePageState extends State<HomePage> {
                     category: selectedCategory,
                     query: queryController.text,
                     filter: selectedFilter,
+                    // userLatitude: position.latitude,
+                    // userLongitude: position.longitude,
                   ),
                   isRecomendation: true,
                 ),
