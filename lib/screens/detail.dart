@@ -41,12 +41,6 @@ class _DetailPageState extends State<DetailPage> {
     _timer?.cancel();
   }
 
-  // final List<String> imageList = [
-  //   'assets/images/banner-explore.jpg',
-  //   'assets/images/banner-wishlist.jpg',
-  //   'assets/images/banner-home.jpg',
-  // ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +62,7 @@ class _DetailPageState extends State<DetailPage> {
                       itemBuilder: (_, index) {
                         return Stack(
                           children: [
-                            Image.asset(
+                            Image.network(
                               widget.destination.images[index],
                               width: double.infinity,
                               height: 250,
@@ -188,21 +182,37 @@ class _DetailPageState extends State<DetailPage> {
                           ],
                         ),
                         SizedBox(height: 5),
-                        const Text(
-                          'HeHa Ocean View adalah tempat wisata di Gunungkidul, Yogyakarta, yang menyajikan pemandangan laut dari atas tebing dan spot foto Instagramable. Cocok untuk menikmati sunset dan bersantai.',
+                        Text(
+                          widget.destination.description,
                           style: AppTextStyles.body,
                         ),
-                        const SizedBox(height: 16),
+                        const SizedBox(height: 5),
                         const Text('Keunggulan', style: AppTextStyles.body),
                         Wrap(
                           spacing: 8,
                           runSpacing: 8,
-                          children: [
-                            _buildTag(Icons.local_parking, 'Parkir'),
-                            _buildTag(Icons.family_restroom, 'Keluarga'),
-                            _buildTag(Icons.attach_money, 'Menengah'),
-                            _buildTag(Icons.camera_alt, 'Fotografi'),
-                          ],
+                          children:
+                              widget.destination.accessibility!.keys
+                                  .where(
+                                    (key) => key != 'total_skor',
+                                  ) // untuk mengecualikan 'total_skor'
+                                  .map((key) => _buildTag(Icons.label, key))
+                                  .toList(),
+                        ),
+                        const Text(
+                          'Rekomendasi Untuk',
+                          style: AppTextStyles.body,
+                        ),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children:
+                              widget.destination.recommendedFor!.keys
+                                  .where(
+                                    (key) => key != 'total_skor',
+                                  ) // untuk mengecualikan 'total_skor'
+                                  .map((key) => _buildTag(Icons.label, key))
+                                  .toList(),
                         ),
                       ],
                     ),
@@ -211,12 +221,20 @@ class _DetailPageState extends State<DetailPage> {
 
                   const Text('Review', style: AppTextStyles.heading2),
                   const SizedBox(height: 12),
-                  _buildReview(
-                    name: 'Taufan Hidayatul Akbar',
-                    rating: '9/10',
-                    comment:
-                        'HeHa Ocean View punya pemandangan laut yang indah dengan banyak spot foto estetik. Cocok buat santai.',
-                  ),
+                  if (widget.destination.ulasan != null &&
+                      widget.destination.ulasan!.isNotEmpty)
+                    ...widget.destination.ulasan!.map<Widget>((ulasan) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: _buildReview(
+                          name: ulasan.nama ?? 'Anonim',
+                          rating: ulasan.rating.toString() ?? '0/10',
+                          comment: ulasan.komentar ?? '',
+                        ),
+                      );
+                    }).toList()
+                  else
+                    const Text('Belum ada ulasan.', style: AppTextStyles.small),
                 ],
               ),
             ),
@@ -283,7 +301,7 @@ class _DetailPageState extends State<DetailPage> {
                         Icon(Icons.star, color: Colors.amber, size: 16),
                         SizedBox(width: 2),
                         Text(
-                          "9/10",
+                         rating,
                           style: AppTextStyles.small.copyWith(
                             color: Colors.amber,
                             fontWeight: FontWeight.bold,

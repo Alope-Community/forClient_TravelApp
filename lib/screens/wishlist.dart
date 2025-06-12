@@ -39,6 +39,7 @@ class _WishlistPageState extends State<WishlistPage> {
 
   @override
   Widget build(BuildContext context) {
+    var wishlistItems2 = wishlistItems;
     return Scaffold(
       bottomNavigationBar: BottomNavbar(currentIndex: 2),
       backgroundColor: Colors.white,

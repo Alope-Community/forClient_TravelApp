@@ -1,3 +1,31 @@
+class Ulasan {
+  final String nama;
+  final int rating;
+  final String komentar;
+
+  Ulasan({
+    required this.nama,
+    required this.rating,
+    required this.komentar,
+  });
+
+  factory Ulasan.fromJson(Map<String, dynamic> json) {
+    return Ulasan(
+      nama: json['nama'] as String,
+      rating: json['rating'] as int,
+      komentar: json['komentar'] as String,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'nama': nama,
+      'rating': rating,
+      'komentar': komentar,
+    };
+  }
+}
+
 class Destination {
   int id;
   String? name;
@@ -10,6 +38,8 @@ class Destination {
   String location;
   List<dynamic> images;
   double? rating;
+  String description;
+  List<Ulasan>? ulasan; // Perbarui tipe data ulasan
 
   Destination({
     required this.id,
@@ -23,12 +53,15 @@ class Destination {
     required this.location,
     required this.images,
     required this.rating,
+    required this.description,
+    required this.ulasan,
   });
 
   factory Destination.fromJson(Map<String, dynamic> json) {
     return Destination(
       id: json['id'] as int,
       name: json['nama'] as String?,
+      description: json['description'] as String? ?? '',
       rating: json['rating'] as double?,
       subCategories: json['subKategori'] != null
           ? List<String?>.from(json['subKategori'])
@@ -44,6 +77,11 @@ class Destination {
       recommendedFor: Map<String, dynamic>.from(json['direkomendasikan_untuk']),
       location: json['lokasi'] as String,
       images: json['images'] as List<dynamic>,
+      ulasan: json['ulasan'] != null
+          ? (json['ulasan'] as List)
+              .map((ulasanJson) => Ulasan.fromJson(ulasanJson))
+              .toList()
+          : null, // Konversi JSON ulasan menjadi List<Ulasan>
     );
   }
 
@@ -58,6 +96,8 @@ class Destination {
       'waktu_kunjungan': visitingTime,
       'direkomendasikan_untuk': recommendedFor,
       'lokasi': location,
+      'description': description,
+      'ulasan': ulasan?.map((ulasan) => ulasan.toJson()).toList(), // Konversi List<Ulasan> ke JSON
     };
   }
 }

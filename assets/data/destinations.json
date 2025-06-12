@@ -3,6 +3,7 @@
         "id": 1,
         "rating": 4.7,
         "nama": "Keraton Yogyakarta",
+        "description": "Istana resmi Kesultanan Yogyakarta yang menjadi pusat budaya Jawa dengan arsitektur tradisional, museum berisi koleksi kerajaan, dan pertunjukan seni seperti tari dan gamelan.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -31,12 +32,30 @@
         "images": [
             "https://sofiayogya.com/upload/kraton-yogyakarta.jpg",
             "https://wisatahappy.com/wp-content/uploads/2024/03/Keraton-Yogyakarta-Isay-So.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rina Wijaya",
+                "rating": 5,
+                "komentar": "Pengalaman budaya yang sangat autentik! Pertunjukan tari di keraton sangat memukau."
+            },
+            {
+                "nama": "Agus Setiawan",
+                "rating": 4,
+                "komentar": "Arsitekturnya indah tapi cukup ramai di akhir pekan."
+            },
+            {
+                "nama": "Dewi Lestari",
+                "rating": 5,
+                "komentar": "Pemandu wisatanya sangat informatif, membuat kami memahami sejarah dengan mudah."
+            }
         ]
     },
     {
         "id": 2,
         "rating": 4.2,
         "nama": "Taman Sari",
+        "description": "Kompleks bekas taman kerajaan dengan kolam pemandian, lorong bawah tanah, dan bangunan unik yang dikenal sebagai 'Water Castle', menggabungkan unsur istana dan pertahanan.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -65,12 +84,25 @@
             "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/02/06/Taman-sari-1-2108702433.jpg",
             "https://nagantour.com/wp-content/uploads/2023/07/taman-sari-yogyakarta-scaled.webp",
             "https://jogjatourholic.com/wp-content/uploads/2022/12/wisata-taman-sari-1.png"
+        ],
+        "ulasan": [
+            {
+                "nama": "Budi Santoso",
+                "rating": 4,
+                "komentar": "Arsitekturnya unik, tapi beberapa area kurang terawat."
+            },
+            {
+                "nama": "Siti Rahayu",
+                "rating": 5,
+                "komentar": "Kolam pemandiannya sangat fotogenik! Recommended untuk fotografer."
+            }
         ]
     },
     {
         "id": 3,
         "rating": 4.5,
         "nama": "Candi Prambanan",
+        "description": "Situs warisan dunia UNESCO, kompleks candi Hindu terbesar di Indonesia dengan arsitektur megah dan relief cerita Ramayana yang sering menjadi lokasi pertunjukan sendratari.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -98,12 +130,30 @@
         "images": [
             "https://apik.klaten.go.id/storage/files/2024/12/01JEJGMVTQB2HQVH9Z1CM52FTX.jpg",
             "https://www.worldhistory.org/uploads/images/9249.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Fajar Nugroho",
+                "rating": 5,
+                "komentar": "Arsitekturnya luar biasa! Sendratari Ramayana di malam hari sangat spektakuler."
+            },
+            {
+                "nama": "Maya Indah",
+                "rating": 4,
+                "komentar": "Candi utama sangat megah, tapi tiket masuk agak mahal."
+            },
+            {
+                "nama": "Hendra Pratama",
+                "rating": 5,
+                "komentar": "Pemandangan sunset dari candi tidak terlupakan!"
+            }
         ]
     },
     {
         "id": 4,
         "rating": 4.0,
         "nama": "Pantai Parangtritis",
+        "description": "Pantai ikonik Yogyakarta dengan ombak besar dan pasir hitam yang dikelilingi mitos Ratu Kidul. Populer untuk sunset, bermain pasir, atau naik ATV di area gumuk pasir.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -128,15 +178,28 @@
             "Fotografer": 1
         },
         "lokasi": "Parangtritis, Kretek, Bantul, Yogyakarta",
-        "images" : [
+        "images": [
             "https://bakpiakukustugu.co.id/uploads/7/2021-08/pantai_parangtritis_jogja.jpeg",
             "https://rainbowrentcar.com/wp-content/uploads/2023/05/Menyelami-Keunikan-Pantai-Parangtritis-Destinasi-Wisata-Laut-di-Jogja-jpg.webp"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rudi Hartono",
+                "rating": 4,
+                "komentar": "Sunset-nya indah sekali! Tapi hati-hati dengan ombaknya yang besar."
+            },
+            {
+                "nama": "Lina Susanti",
+                "rating": 3,
+                "komentar": "Pasir hitamnya unik, tapi cukup banyak sampah di beberapa area."
+            }
         ]
     },
     {
         "id": 5,
         "rating": 4.0,
         "nama": "Goa Jomblang",
+        "description": "Goa vertikal dengan pemandangan cahaya surga yang menembus lubang di atasnya. Aktivitas utama adalah susur goa dengan tali dan menikmati kolam air jernih di dasar goa.",
         "subKategori": [
             "Wisata Alam",
             "Goa & Air Terjun"
@@ -159,15 +222,23 @@
             "Fotografer": 1
         },
         "lokasi": "Jetis Wetan, Pacarejo, Semanu, Gunung Kidul, Yogyakarta",
-        "images" : [
+        "images": [
             "https://nagantour.com/wp-content/uploads/2023/10/Goa-Jomblang-1.webp",
             "https://bakpiakukustugu.co.id/uploads/11/2023-10/goa_jomblang.jpg"
-        ]    
+        ],
+        "ulasan": [
+            {
+                "nama": "Rudi Hartono",
+                "rating": 4,
+                "komentar": "Goa nya bagus sekali apalagi ketika sinar matahari nya terlihat waww gila."
+            }
+        ]
     },
     {
         "id": 6,
         "rating": 3.5,
         "nama": "Kebun Buah Mangunan",
+        "description": "Agrowisata di perbukitan dengan kebun buah tropis dan spot foto menghadap lembah hijau Sungai Oya. Pengunjung bisa memetik buah langsung atau berfoto di gardu pandang.",
         "subKategori": [
             "Wisata Alam",
             "Desa Wisata & Agrowisata"
@@ -190,15 +261,28 @@
             "Fotografer": 1
         },
         "lokasi": "Mangunan, Dlingo, Bantul, Yogyakarta",
-        "images" : [
+        "images": [
             "https://assets.jabarekspres.com/sukabumi/2024/02/Kebun-Buah-Mangunan.webp",
             "https://inionline.id/wp-content/uploads/2021/12/Pemandangan-perbukitan-puncak-kebun-buah-mangunan-Kimin-Channel.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rina Febriyanti",
+                "rating": 4,
+                "komentar": "Spot foto di gardu pandangnya instagramable banget! Tapi buahnya kadang kurang banyak saat musim kemarau."
+            },
+            {
+                "nama": "Bambang Surya",
+                "rating": 3,
+                "komentar": "Pemandangan lembahnya indah, tapi jalur menuju lokasi agak sempit dan berdebu."
+            }
         ]
     },
     {
         "id": 7,
         "rating": 3.9,
         "nama": "Museum Ullen Sentalu",
+        "description": "Museum seni dan budaya Jawa yang menyimpan koleksi kerajaan Mataram dalam bangunan bergaya Eropa-Jawa. Memamerkan batik, foto sejarah, dan artefak keraton.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -222,15 +306,28 @@
             "Solo Traveler": 1
         },
         "lokasi": "Jl. Boyong Km 25, Kaliurang Barat, Sleman, Yogyakarta",
-        "images" : [
+        "images": [
             "https://casaindonesia.com/lkgallery/teaser/ullen_teaser_46_201901171654348z7kfe.jpg",
             "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/222/2024/09/27/WhatsApp-Image-2024-09-26-at-152925-2448933367.jpeg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Dewi Kartika",
+                "rating": 5,
+                "komentar": "Arsitektur bangunannya unik! Koleksi batik keratonnya langka dan terawat baik."
+            },
+            {
+                "nama": "Haryanto",
+                "rating": 4,
+                "komentar": "Pemandu museum sangat berwawasan, tapi harga tiket masuk agak mahal."
+            }
         ]
     },
     {
         "id": 8,
         "rating": 4.0,
         "nama": "Tebing Breksi",
+        "description": "Formasi batuan vulkanik unik hasil penambangan tradisional yang diukir menjadi galeri seni terbuka. Menawarkan spot foto kreatif dan pemandangan sunset spektakuler.",
         "subKategori": [
             "Wisata Alam",
             "Gunung & Pegunungan"
@@ -254,15 +351,28 @@
             "Fotografer": 1
         },
         "lokasi": "Sambirejo, Prambanan, Sleman, Yogyakarta",
-        "images" : [
+        "images": [
             "https://asset-2.tstatic.net/travel/foto/bank/images/pemandangan-sunset-dari-tebing-breksi.jpg",
             "https://s-light.tiket.photos/t/01E25EBZS3W0FY9GTG6C42E1SE/rsfit621414gsm/events/2022/12/12/52798af9-f6ee-45b3-88f9-e87793ca08a2-1670859406835-6e1630ef30232537abe61423096cd6ec.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rizal Fauzi",
+                "rating": 5,
+                "komentar": "Sunset di sini bikin nagih! Ukiran tebingnya artistik banget."
+            },
+            {
+                "nama": "Siti Aisyah",
+                "rating": 4,
+                "komentar": "Tempatnya unik, tapi panas siang hari karena minim pepohonan."
+            }
         ]
     },
     {
         "id": 9,
         "rating": 3.7,
         "nama": "Taman Pintar",
+        "description": "Wahana edukasi interaktif untuk anak-anak dengan zona sains, teknologi, dan budaya. Dilengkapi playground, simulator gempa, dan area kreativitas hands-on.",
         "subKategori": [
             "Wisata Kota",
             "Keluarga & Hiburan"
@@ -289,12 +399,25 @@
         "lokasi": "Jl. Panembahan Senopati No.1-3, Yogyakarta",
         "images": [
             "https://img.harianjogja.com/posts/2024/06/29/1179615/taman-pintar.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Ika Nurmalasari",
+                "rating": 4,
+                "komentar": "Anak-anak seneng banget main simulator gempa! Tapi beberapa alat edukasi ada yang rusak."
+            },
+            {
+                "nama": "Arif Budiman",
+                "rating": 5,
+                "komentar": "Tempat wajib untuk keluarga! Edukasi sains dikemas dengan cara menyenangkan."
+            }
         ]
     },
     {
         "id": 10,
         "rating": 4.0,
         "nama": "Jogja Bay Waterpark",
+        "description": "Taman air modern dengan kolam ombak, seluncuran ekstrem, dan zona anak bertema bajak laut. Dilengkapi food court dan spot foto instagramable.",
         "subKategori": [
             "Wisata Kota",
             "Keluarga & Hiburan"
@@ -317,14 +440,27 @@
             "Keluarga": 1
         },
         "lokasi": "Jl. Utara Stadion, Maguwoharjo, Depok, Sleman, Yogyakarta",
-        "images" : [
+        "images": [
             "https://kelilingjogja.id/wp-content/uploads/2022/01/jogja-bay-waterpark-min-640x450.png"
+        ],
+        "ulasan": [
+            {
+                "nama": "Dian Kusuma",
+                "rating": 4,
+                "komentar": "Wahana seru untuk anak-anak! Tapi harga makanan di dalam agak mahal."
+            },
+            {
+                "nama": "Rendra Pratama",
+                "rating": 5,
+                "komentar": "Kolam ombaknya realistis! Fasilitasnya lengkap dan bersih."
+            }
         ]
     },
     {
         "id": 11,
         "rating": 4.6,
         "nama": "Candi Borobudur",
+        "description": "Candi Buddha terbesar di dunia dengan stupa megah dan relief yang menceritakan kehidupan Buddha. Sunrise di Borobudur menjadi pengalaman wajib bagi wisatawan.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -349,15 +485,28 @@
             "Fotografer": 1
         },
         "lokasi": "Borobudur, Magelang, Jawa Tengah",
-        "images" : [
+        "images": [
             "https://cpanel-blog.smsperkasa.com/wp-content/uploads/2023/09/Tata-Letak-dan-Bentuk-Candi-Borobudur-1024x683.jpg",
             "https://assets-a1.kompasiana.com/items/album/2021/04/28/tempat-wisata-sekitar-candi-borobudur-60893a04d541df5e5c65c512.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Ahmad Faisal",
+                "rating": 5,
+                "komentar": "Sunrise di Borobudur magical banget! Reliefnya detail dan penuh makna."
+            },
+            {
+                "nama": "Lina Marlina",
+                "rating": 4,
+                "komentar": "Candi megah tapi terlalu ramai di hari libur."
+            }
         ]
     },
     {
         "id": 12,
         "rating": 4.7,
         "nama": "Malioboro",
+        "description": "Jalan legendaris Yogyakarta yang terkenal dengan deretan pedagang kaki lima, toko oleh-oleh, dan seniman jalanan. Hidup di malam hari dengan keramaian dan angkringan.",
         "subKategori": [
             "Wisata Kota",
             "Belanja & Kuliner"
@@ -382,15 +531,28 @@
             "Solo Traveler": 1
         },
         "lokasi": "Jl. Malioboro, Yogyakarta",
-        "images":[
+        "images": [
             "https://niagatour.com/wp-content/smush-webp/2018/02/malioboro-@ahiwicaksono.jpg.webp",
             "https://statik.tempo.co/data/2019/12/03/id_894257/894257_720.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rudi Hartanto",
+                "rating": 5,
+                "komentar": "Suasana malam yang hidup! Jangan lupa cobain gudeg di angkringan."
+            },
+            {
+                "nama": "Sinta Dewi",
+                "rating": 4,
+                "komentar": "Tempat belanja oleh-oleh lengkap, tapi harus pandai tawar-menawar."
+            }
         ]
     },
     {
         "id": 13,
         "rating": 4.0,
         "nama": "Alun-Alun Kidul",
+        "description": "Alun-alun selatan Keraton Yogyakarta yang terkenal dengan permainan 'Masangin' (berjalan tertutup mata antara dua pohon beringin) dan lampu warna-warni di malam hari.",
         "subKategori": [
             "Wisata Kota",
             "Keluarga & Hiburan"
@@ -413,14 +575,27 @@
             "Pasangan": 1
         },
         "lokasi": "Alun-Alun Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://img.era.id/f6SdFLNNj5X8fHWbdemTk6gavv3C7ZVKDr_9qF1GoEY/rs:fill:1280:720/g:sm/bG9jYWw6Ly8vcHVibGlzaGVycy8xMTY0MjYvMjAyMzAxMjcxMzE2LW1haW4uanBn.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Dito Prakoso",
+                "rating": 4,
+                "komentar": "Permainan Masangin seru! Lampu warna-warni di malam hari romantis banget."
+            },
+            {
+                "nama": "Anisa Fitri",
+                "rating": 5,
+                "komentar": "Gratis dan selalu ramai! Cocok untuk nongkrong malam."
+            }
         ]
     },
     {
         "id": 14,
         "rating": 4.2,
         "nama": "Goa Pindul",
+        "description": "Wisata susur goa dengan tubing (mengapung di ban dalam) menyusuri sungai bawah tanah sejauh 350 meter. Pengalaman unik melihat stalaktit dalam kegelapan dengan penerangan lilin.",
         "subKategori": [
             "Wisata Alam",
             "Goa & Air Terjun"
@@ -443,15 +618,28 @@
             "Pasangan": 1
         },
         "lokasi": "Bejiharjo, Karangmojo, Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/05/ef/93/sewa-mobil-jogja-paket.jpg",
             "https://2.bp.blogspot.com/-jjZpMa4S1ik/TzpO4TSeoAI/AAAAAAAAANU/0gb9yJUd684/s1600/DSC_0033edt.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rina Anggraeni",
+                "rating": 5,
+                "komentar": "Pengalaman tubing seru! Pemandu profesional dan peralatan safety lengkap."
+            },
+            {
+                "nama": "Adi Nugroho",
+                "rating": 4,
+                "komentar": "Airnya jernih tapi agak dingin. Bawa baju ganti!"
+            }
         ]
     },
     {
         "id": 15,
         "rating": 4.1,
         "nama": "Pantai Timang",
+        "description": "Pantai dengan tebing karang curam dan jembatan gondola tradisional (Timang Beach Gondola) yang menantang adrenalin. Dikenal dengan pemandangan ombak besar menghantam karang.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -474,15 +662,28 @@
             "Fotografer": 1
         },
         "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://simasinsurtech.com/wp-content/uploads/2023/08/Kereta-Gantung-Pantai-Timang-body.jpeg",
             "https://pamitranrentalmotor.com/wp-content/uploads/2019/01/pantai-timang-@tankwanhong.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Fajar Setiawan",
+                "rating": 5,
+                "komentar": "Gondolanya bikin deg-degan! Pemandangan ombak menghantam karang epik banget."
+            },
+            {
+                "nama": "Larasati",
+                "rating": 4,
+                "komentar": "Biaya gondola agak mahal, tapi worth it untuk pengalaman unik."
+            }
         ]
     },
     {
         "id": 16,
         "rating": 4.0,
         "nama": "Museum Sonobudoyo",
+        "description": "Museum budaya Jawa terlengkap setelah Nasional Jakarta. Menyimpan koleksi wayang, senjata tradisional, topeng, dan artefak sejarah Keraton Yogyakarta.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -505,14 +706,27 @@
             "Solo Traveler": 1
         },
         "lokasi": "Jl. Pangurakan No.6, Yogyakarta",
-        "images":[
+        "images": [
             "https://arkadewi.id/wp-content/uploads/2014/07/Museum-Sonobudoyo.webp"
+        ],
+        "ulasan": [
+            {
+                "nama": "Budi Santosa",
+                "rating": 4,
+                "komentar": "Koleksi wayangnya lengkap! Cocok untuk belajar budaya Jawa."
+            },
+            {
+                "nama": "Rini Wulandari",
+                "rating": 5,
+                "komentar": "Tiket murah tapi isinya berkelas. Pemandu ramah dan informatif."
+            }
         ]
     },
     {
         "id": 17,
         "rating": 4.4,
         "nama": "Kaliurang",
+        "description": "Kawasan peristirahatan di lereng Merapi dengan udara sejuk, vila kolonial, dan pemandangan hijau. Terdapat taman bermain dan trekking menuju air terjun.",
         "subKategori": [
             "Wisata Alam",
             "Gunung & Pegunungan"
@@ -537,12 +751,25 @@
         "lokasi": "Kaliurang, Sleman, Yogyakarta",
         "images": [
             "https://nagantour.com/wp-content/uploads/2023/07/wisata-kaliurang.webp"
+        ],
+        "ulasan": [
+            {
+                "nama": "Dian Purnama",
+                "rating": 5,
+                "komentar": "Udara sejuk dan pemandangan hijau bikin rileks. Vila-vila klasiknya fotogenik!"
+            },
+            {
+                "nama": "Hendra Kurniawan",
+                "rating": 4,
+                "komentar": "Trekking ke air terjunnya menantang tapi menyenangkan."
+            }
         ]
     },
     {
         "id": 18,
         "rating": 3.9,
         "nama": "Candi Ratu Boko",
+        "description": "Kompleks reruntuhan istana dari abad ke-8 dengan arsitektur campuran Hindu-Buddha. Terkenal dengan spot sunset romantis dan pemandangan Candi Prambanan dari ketinggian.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -567,12 +794,25 @@
         "lokasi": "Bokoharjo, Prambanan, Sleman, Yogyakarta",
         "images": [
             "https://i0.wp.com/blog.ubuvilla.com/wp-content/uploads/2023/12/image-34.png"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rizky Maulana",
+                "rating": 5,
+                "komentar": "Sunset di sini seperti di film! Pemandangan Prambanan dari atas spektakuler."
+            },
+            {
+                "nama": "Siska Permata",
+                "rating": 4,
+                "komentar": "Tiket agak mahal, tapi pemandangannya worth it untuk foto prewedding."
+            }
         ]
     },
     {
         "id": 19,
         "rating": 4.3,
         "nama": "Pantai Indrayanti",
+        "description": "Pantai berpasir putih dengan fasilitas resort dan gazebo tepi pantai. Cocok untuk berenang atau sekadar bersantai sambil menikmati kelapa muda dan seafood segar.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -597,12 +837,25 @@
         "lokasi": "Tepus, Gunung Kidul, Yogyakarta",
         "images": [
             "https://www.bakpiamutiarajogja.com/wp-content/uploads/2015/06/info-wisata-lengkap-pantai-indrayanti.png"
+        ],
+        "ulasan": [
+            {
+                "nama": "Ayu Lestari",
+                "rating": 5,
+                "komentar": "Gazebo tepi pantai nyaman banget! Kelapa muda dan grilled fish wajib dicoba."
+            },
+            {
+                "nama": "Rudi Hermawan",
+                "rating": 4,
+                "komentar": "Pasir putihnya bersih, tapi harga seafood agak mahal."
+            }
         ]
     },
     {
         "id": 20,
         "rating": 3.7,
         "nama": "Zoo Gembira Loka",
+        "description": "Kebun binatang modern dengan koleksi satwa lokal dan internasional. Dilengkapi wahana perahu, area feeding animal, dan pertunjukan satwa edukatif untuk anak-anak.",
         "subKategori": [
             "Wisata Kota",
             "Keluarga & Hiburan"
@@ -625,15 +878,28 @@
             "Keluarga": 1
         },
         "lokasi": "Jl. Kebun Raya No.2, Yogyakarta",
-        "images":[
+        "images": [
             "https://jogjakeren.com/wp-content/uploads/2024/08/gembiraloka-zoo-jogja-keren.webp",
             "https://arkadewi.id/wp-content/uploads/2022/08/Gembira-Loka-Zoo.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Dina Febriana",
+                "rating": 4,
+                "komentar": "Anak-anak seneng banget liatt show lumba-lumba! Tapi beberapa kandang agak bau."
+            },
+            {
+                "nama": "Andi Saputra",
+                "rating": 3,
+                "komentar": "Fasilitas umum perlu ditingkatkan, terutama toilet."
+            }
         ]
     },
     {
         "id": 21,
         "rating": 4.2,
         "nama": "Puncak Becici",
+        "description": "Bukit dengan pemandangan 360° deretan pantai Gunung Kidul dan laut selatan. Spot populer untuk camping, foto prewedding, atau menikmati sunrise/sunset.",
         "subKategori": [
             "Wisata Alam",
             "Gunung & Pegunungan"
@@ -656,15 +922,28 @@
             "Fotografer": 1
         },
         "lokasi": "Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://www.bakpiamutiarajogja.com/wp-content/uploads/2017/08/puncak-becici-foto-dari-@gadistafidha.jpg",
             "https://www.kartanesia.com/wp-content/uploads/2019/05/Keindahan-Alam-Puncak-Becici.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Galih Pratama",
+                "rating": 5,
+                "komentar": "Pemandangan pantai dari ketinggian bikin speechless! Spot campingnya nyaman."
+            },
+            {
+                "nama": "Rina Oktaviani",
+                "rating": 4,
+                "komentar": "Akses jalan menanjak tapi worth it untuk sunset romantis."
+            }
         ]
     },
     {
         "id": 22,
         "rating": 3.7,
         "nama": "Museum Affandi",
+        "description": "Museum pribadi pelukis maestro Affandi yang menampilkan karya-karya asli dan studio lukisnya. Arsitektur bangunan unik dengan atap berbentuk daun pisang.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -687,14 +966,27 @@
             "Fotografer": 1
         },
         "lokasi": "Jl. Laksda Adisucipto No.167, Yogyakarta",
-        "images":[
+        "images": [
             "https://museum.co.id/wp-content/uploads/2020/09/Museum-Affandi.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Fajar Setiawan",
+                "rating": 4,
+                "komentar": "Arsitektur museumnya unik! Karya Affandi menggambarkan emosi yang kuat."
+            },
+            {
+                "nama": "Lina Marlina",
+                "rating": 3,
+                "komentar": "Koleksinya bagus tapi ukuran museum kecil."
+            }
         ]
     },
     {
         "id": 23,
         "rating": 4.5,
         "nama": "Air Terjun Sri Gethuk",
+        "description": "Air terjun bertingkat dengan kolam alami berwarna hijau kebiruan. Dikelilingi tebing batu dan vegetasi tropis, bisa dicapai dengan trekking atau naik perahu tradisional.",
         "subKategori": [
             "Wisata Alam",
             "Goa & Air Terjun"
@@ -717,15 +1009,28 @@
             "Pasangan": 1
         },
         "lokasi": "Widoro, Ngestiharjo, Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://garasijogja.com/wp-content/uploads/2016/09/novitavs_.jpg",
             "https://pancar.id/wp-content/uploads/2024/07/Pancar.id-Menikmati-Keindahan-Alam-Air-Terjun-Sri-Gethuk-Yogyakarta.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Budi Santoso",
+                "rating": 5,
+                "komentar": "Air terjunnya sejuk dan alami! Trekking menyusuri sungai seru banget."
+            },
+            {
+                "nama": "Siti Rahma",
+                "rating": 4,
+                "komentar": "Perjalanan naik perahu tradisionalnya menyenangkan, tapi biaya tambahan agak mahal."
+            }
         ]
     },
     {
         "id": 24,
         "rating": 4.3,
         "nama": "Pantai Krakal",
+        "description": "Pantai landai berpasir putih dengan ombak tenang, cocok untuk berenang. Fasilitas lengkap dengan gazebo, warung seafood, dan area bermain anak.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -748,14 +1053,27 @@
             "Pasangan": 1
         },
         "lokasi": "Krakal, Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://storage.googleapis.com/seo-cms/assets/Pesona_Pantai_Krakal_Jogja_92f7885a4e/Pesona_Pantai_Krakal_Jogja_92f7885a4e.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Rina Anggraeni",
+                "rating": 5,
+                "komentar": "Ombaknya tenang, aman untuk anak-anak berenang. Gazebonya nyaman untuk keluarga."
+            },
+            {
+                "nama": "Dito Pratama",
+                "rating": 4,
+                "komentar": "Warung seafoodnya enak, tapi harga agak tinggi di akhir pekan."
+            }
         ]
     },
     {
         "id": 25,
         "rating": 3.8,
         "nama": "Benteng Vredeburg",
+        "description": "Benteng Vredeburg adalah bangunan bersejarah di pusat Kota Yogyakarta yang menyimpan berbagai koleksi museum tentang perjuangan kemerdekaan Indonesia. Cocok untuk wisata edukatif bersama keluarga atau solo traveler.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -778,14 +1096,22 @@
             "Solo Traveler": 1
         },
         "lokasi": "Jl. Margo Mulyo No.6, Yogyakarta",
-        "images":[
+        "images": [
             "https://asset.kompas.com/crops/FOpB6P7634YFwHR-dg4OEbwZKzc=/0x0:2553x1702/1200x800/data/photo/2024/06/08/6663940c5dab2.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Agus Wibowo",
+                "rating": 4,
+                "komentar": "Museumnya informatif!"
+            }
         ]
     },
     {
         "id": 26,
         "rating": 4.5,
         "nama": "Bukit Bintang",
+        "description": "Bukit Bintang adalah tempat favorit untuk menikmati panorama malam Yogyakarta dari ketinggian. Suasana romantis dan udara sejuk menjadikannya destinasi ideal bagi pasangan dan pecinta fotografi.",
         "subKategori": [
             "Wisata Alam",
             "Gunung & Pegunungan"
@@ -808,7 +1134,7 @@
             "Fotografer": 1
         },
         "lokasi": "Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://yogjo.com/wp-content/uploads/2020/03/bukit-bintang-jogja.jpg"
         ]
     },
@@ -816,6 +1142,7 @@
         "id": 27,
         "rating": 3.8,
         "nama": "Goa Selarong",
+        "description": "Goa Selarong merupakan tempat bersejarah yang pernah menjadi markas gerilya Pangeran Diponegoro. Selain nuansa alamnya yang asri, tempat ini menawarkan nilai sejarah yang mendalam.",
         "subKategori": [
             "Wisata Alam",
             "Goa & Air Terjun"
@@ -838,14 +1165,22 @@
             "Pasangan": 1
         },
         "lokasi": "Girimulyo, Dukun, Bantul, Yogyakarta",
-        "images":[
+        "images": [
             "https://asset.kompas.com/crops/OZvBetYRjceywyEvvEeg914scqo=/0x0:780x520/1200x800/data/photo/2021/07/18/60f3f2f9e4bdf.jpg"
+        ],
+        "ulasan": [
+            {
+                "nama": "Agus",
+                "rating": 4,
+                "komentar": "Goa nya bagus sekali apalagi ketika sinar matahari nya terlihat waww gila."
+            }
         ]
     },
     {
         "id": 28,
         "rating": 4.5,
         "nama": "Pantai Siung",
+        "description": "Pantai Siung terkenal dengan tebing-tebing karangnya yang eksotis dan menjadi surga bagi pencinta panjat tebing. Suasana sore hari yang tenang sangat cocok untuk pasangan atau hunting foto.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -868,14 +1203,22 @@
             "Fotografer": 1
         },
         "lokasi": "Purwodadi, Tepus, Gunung Kidul, Yogyakarta",
-        "images":[
+        "images": [
             "https://visitingjogja.jogjaprov.go.id/wp-content/uploads/2017/01/pantai-siung.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Daffa",
+                "rating": 4,
+                "komentar": "Pasir putihnya bersih, tapi harga seafood agak mahal."
+            }
         ]
     },
     {
         "id": 29,
         "rating": 4.3,
         "nama": "Museum Batik Yogyakarta",
+        "description": "Museum Batik Yogyakarta menyuguhkan koleksi batik khas Indonesia yang lengkap, mulai dari tradisional hingga kontemporer. Tempat ini ideal untuk wisata budaya yang mendalam.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -898,14 +1241,22 @@
             "Solo Traveler": 1
         },
         "lokasi": "Jl. Dr. Sutomo No.13, Yogyakarta",
-        "images":[
+        "images": [
             "https://www.kartanesia.com/wp-content/uploads/2019/04/Museum-Batik-Jogja.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Agus",
+                "rating": 3,
+                "komentar": "Museumnya informatif!"
+            }
         ]
     },
     {
         "id": 30,
         "rating": 4.5,
         "nama": "Puncak Suroloyo",
+        "description": "Puncak Suroloyo menyajikan panorama alam yang spektakuler, terutama saat pagi hari. Tempat ini sering dikunjungi oleh pasangan dan fotografer untuk menikmati sunrise yang menawan.",
         "subKategori": [
             "Wisata Alam",
             "Gunung & Pegunungan"
@@ -928,14 +1279,22 @@
             "Fotografer": 1
         },
         "lokasi": "Kulon Progo, Yogyakarta",
-        "images":[
+        "images": [
             "https://cdn2.gnfi.net/gnfi/uploads/articles/0ac729bb52ff8c83515d34a65125f7c357b35175-s2-n1-eab39b1645bcda7927a7196e2628bdbc.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Agus",
+                "rating": 4,
+                "komentar": "Udara sejuk dan pemandangan hijau bikin rileks. Vila-vila klasiknya fotogenik!"
+            }
         ]
     },
     {
         "id": 31,
         "rating": 4.3,
         "nama": "Pantai Wediombo",
+        "description": "Pantai Wediombo adalah destinasi eksotis di Gunung Kidul dengan lanskap alami yang memukau. Cocok untuk liburan keluarga dan pasangan yang ingin menikmati pasir putih dan ombak tenang.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -962,12 +1321,20 @@
             "https://kotajogja.co.id/wp-content/uploads/2023/07/Harga-tiket-masuk-pantai-wediombo.jpg",
             "https://asset.kompas.com/crops/RPRhM0TLDwES5yEWbE46-4qlBm0=/0x0:0x0/1200x800/data/photo/2022/05/17/62836abc662c4.jpg",
             "https://asset.kompas.com/crops/YH-g3V8K_sb7vT-9KMQfFky1PYk=/0x0:1650x1100/750x500/data/photo/2020/12/29/5feaca020f15e.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Billy",
+                "rating": 4,
+                "komentar": "Pasir putihnya bersih, tapi harga seafood agak mahal."
+            }
         ]
     },
     {
         "id": 32,
         "rating": 4.3,
         "nama": "Candi Ijo",
+        "description": "Candi Ijo adalah situs arkeologi yang terletak di ketinggian dan menyuguhkan pemandangan alam sekaligus warisan budaya. Cocok untuk para fotografer dan pasangan yang ingin menjelajah sejarah.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -1000,6 +1367,7 @@
         "id": 33,
         "rating": 4.3,
         "nama": "Pantai Glagah",
+        "description": "Pantai Glagah menawarkan keindahan laut berpadu dengan pemecah ombak yang ikonik. Tempat ini menjadi destinasi populer bagi keluarga dan pasangan yang ingin bersantai sambil menikmati panorama laut.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -1025,12 +1393,20 @@
         "images": [
             "https://berjogja.com/wp-content/uploads/2025/02/Pantai-Glagah.jpg",
             "https://nagantour.com/wp-content/uploads/2020/03/Pemecah-Ombak-di-Pantai-Glagah-Indah.webp"
+        ],
+         "ulasan": [
+            {
+                "nama": "Agus",
+                "rating": 4,
+                "komentar": "pantai gelagajh nya bagus sekali ketika sunset matahari nya terlihat waww gila."
+            }
         ]
     },
     {
         "id": 34,
         "rating": 4.3,
         "nama": "Goa Kiskendo",
+        "description": "Goa Kiskendo memiliki keindahan alami serta kisah legenda Ramayana yang melekat di dalamnya. Tempat ini sangat cocok untuk wisata keluarga dan pasangan yang menyukai eksplorasi alam dan budaya.",
         "subKategori": [
             "Wisata Alam",
             "Goa & Air Terjun"
@@ -1057,12 +1433,20 @@
             "https://asset.kompas.com/crops/95gXjrRy2q1A0UgJy3rbBjskTo4=/0x112:1600x1178/1200x800/data/photo/2022/06/19/62af1dcb3940e.jpeg",
             "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9U3Y2UFUwbf9a0ZW01SQ-R04O2ps66AU3hEeudhhRZl_VvsLpGUvJlZsaJ9uZfVlf8E2Md8A_cbNyRYo4lXa2FdvzPeaLmvpWsKpSWy8DfpBSGemYVeWfkBClS2QZ36AsOMqR1qPK6RtXP45dhYiUTeLQQqS9OS_D68uCxSK1gRZJf34egjC_jsxa/s750/Goa%20Kiskenda%20Kulon%20Progo%20terbaru.webp",
             "https://saibetik.com/wp-content/uploads/2024/05/GOA-2.jpeg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Adi Nugroho",
+                "rating": 4,
+                "komentar": "Goa nya bagus sekali apalagi ketika sinar matahari nya terlihat waww gila."
+            }
         ]
     },
     {
         "id": 35,
         "rating": 4.3,
         "nama": "Museum Dirgantara",
+        "description": "Museum Dirgantara Yogyakarta menampilkan koleksi pesawat dan sejarah penerbangan Indonesia. Tempat ini ideal untuk kunjungan edukatif bersama keluarga atau traveler yang tertarik dengan dunia aviasi.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -1087,12 +1471,20 @@
         "lokasi": "Jl. Kolonel Sugiyono, Yogyakarta",
         "images": [
             "https://cdn.wisata.app/diary/10601120-5039-80dc-be8a-eda66d567b0e.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Agus",
+                "rating": 4,
+                "komentar": "Tiket murah tapi isinya berkelas. Pemandu ramah dan informatif."
+            }
         ]
     },
     {
         "id": 36,
         "rating": 4.3,
         "nama": "Pantai Baron",
+        "description": "Pantai Baron memiliki hamparan pasir putih dan air laut jernih yang menawan, cocok untuk liburan santai bersama keluarga atau pasangan. Suasana pantai yang tenang membuatnya jadi spot favorit untuk piknik dan bermain air.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -1118,12 +1510,20 @@
         "images": [
             "https://asset.kompas.com/crops/UAtpMzvlzMn-u2o5mKqHw6nnoR0=/0x0:0x0/1200x800/data/photo/2022/01/13/61df9374bf93c.jpg",
             "https://nagantour.com/wp-content/uploads/2020/03/pantai-baron.webp"
+        ],
+         "ulasan": [
+            {
+                "nama": "Agus",
+                "rating": 4,
+                "komentar": "pantai baron nya bagus sekali ketika sunset matahari nya terlihat waww gila."
+            }
         ]
     },
     {
         "id": 37,
         "rating": 4.3,
         "nama": "Candi Sambisari",
+        "description": "Candi Sambisari merupakan situs arkeologi yang unik karena letaknya berada beberapa meter di bawah permukaan tanah. Terletak di Kalasan, Sleman, candi ini menawarkan pengalaman sejarah yang tenang dan cocok untuk pasangan serta fotografer yang ingin mengeksplorasi budaya dan arsitektur kuno.",
         "subKategori": [
             "Wisata Kota",
             "Bersejarah & Budaya"
@@ -1150,12 +1550,20 @@
             "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Candi_Sambisari_main_temple_2013-11-28_01.jpg/1200px-Candi_Sambisari_main_temple_2013-11-28_01.jpg",
             "https://asset.kompas.com/crops/9rd28xbx5d4cuyZtx4MXz4aczKg=/134x161:1572x1119/1200x800/data/photo/2023/02/02/63db284b9ab73.jpg",
             "https://www.magnetoholidays.id/wp-content/uploads/2023/03/Berwisata-ke-Situs-Peninggalan-Sejarah-Candi-Sambisari-yang-Mirip-Kastil-Batu.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "baya",
+                "rating": 4,
+                "komentar": "Candi sambisari sangat megah, tapi tiket masuk agak mahal."
+            }
         ]
     },
     {
         "id": 38,
         "rating": 4.3,
         "nama": "Pantai Drini",
+        "description": "Pantai Drini di Gunung Kidul menyuguhkan pemandangan eksotis dengan pulau karang kecil di tengah laut dan pasir putih bersih. Cocok untuk liburan keluarga atau momen romantis bersama pasangan, terutama saat sore hari ketika matahari terbenam menghiasi cakrawala.",
         "subKategori": [
             "Wisata Alam",
             "Pantai & Sungai"
@@ -1181,6 +1589,13 @@
         "images": [
             "https://upload.wikimedia.org/wikipedia/commons/5/52/Pantai_Drini_Top_View.jpg",
             "https://arkadewi.id/wp-content/uploads/2015/01/pantai_drini.jpg"
+        ],
+         "ulasan": [
+            {
+                "nama": "Ika Nurmalasari",
+                "rating": 4,
+                "komentar": "pantai baron nya bagus sekali ketika sunset matahari nya terlihat waww gila."
+            }
         ]
     }
 ]
