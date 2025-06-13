@@ -1,7 +1,10 @@
 import 'dart:math';
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:forclient_travelapp/models/destination.dart';
+import 'package:forclient_travelapp/utils/position.dart';
+import 'package:geolocator/geolocator.dart';
 
 Future<List<Destination>> getDestinations({
   String? query,
@@ -27,94 +30,38 @@ Future<List<Destination>> getDestinations({
   } else if (filter == 'price') {
     destinations.sort((a, b) => (a.budget).compareTo(b.budget));
   } else if (filter == 'alam') {
-    destinations = destinations
-        .where(
-          (destination) =>
-              destination.subCategories?.contains('Wisata Alam') ?? false,
-        )
-        .toList();
+    destinations =
+        destinations
+            .where(
+              (destination) =>
+                  destination.subCategories?.contains('Wisata Alam') ?? false,
+            )
+            .toList();
   } else if (filter == 'kota') {
-    destinations = destinations
-        .where(
-          (destination) =>
-              destination.subCategories?.contains('Wisata Kota') ?? false,
-        )
-        .toList();
+    destinations =
+        destinations
+            .where(
+              (destination) =>
+                  destination.subCategories?.contains('Wisata Kota') ?? false,
+            )
+            .toList();
   }
 
   return destinations;
-}
-
-/**
- * For get recomendation with saw jarak user ke wisata
- */
-
-class ScoredDestination {
-  final Destination dest;
-  final double score;
-  final double distance;
-  ScoredDestination(this.dest, this.score, this.distance);
-}
-
-Future<List<Destination>> getRecommendationsSAW({
-  required List<Destination> destinations,
-  required double userLat,
-  required double userLon,
-  required Map<String, double> weights, // e.g. {'distance':0.4,'rating':0.3,'budget':0.3}
-}) async {
-  // 1. Hitung distance untuk tiap destinasi
-  final distances = destinations.map((d) {
-    final dist = _calculateDistance(userLat, userLon, d.latitude, d.longitude);
-    return dist;
-  }).toList();
-
-  // 2. Kumpulkan nilai tiap kriteria
-  final ratings = destinations.map((d) => d.rating ?? 0.0).toList();
-  final budgets = destinations.map((d) => d.budget.toDouble()).toList();
-
-  // 3. Cari min/max untuk normalisasi
-  final maxRating = ratings.reduce(max);
-  final minDistance = distances.reduce(min);
-  final minBudget = budgets.reduce(min);
-
-  // 4. Hitung skor SAW tiap destinasi
-  List<ScoredDestination> scored = [];
-  for (int i = 0; i < destinations.length; i++) {
-    // Normalisasi
-    final rRating = (maxRating > 0) ? ratings[i] / maxRating : 0;
-    final rDistance = (distances[i] > 0) ? minDistance / distances[i] : 0;
-    final rBudget = (budgets[i] > 0) ? minBudget / budgets[i] : 0;
-
-    // Weighted sum
-    final score = 
-        weights['rating']! * rRating +
-        weights['distance']! * rDistance +
-        weights['budget']! * rBudget;
-
-    scored.add(ScoredDestination(destinations[i], score, distances[i]));
-  }
-
-  // 5. Urutkan berdasarkan score tertinggi
-  scored.sort((a, b) => b.score.compareTo(a.score));
-
-  // Kembalikan daftar Destination terurut
-  return scored.map((sd) => sd.dest).toList();
 }
 
 double _calculateDistance(double lat1, double lon1, double lat2, double lon2) {
   const R = 6371; // km
   final dLat = _deg2rad(lat2 - lat1);
   final dLon = _deg2rad(lon2 - lon1);
-  final a = sin(dLat/2)*sin(dLat/2) +
-      cos(_deg2rad(lat1)) * cos(_deg2rad(lat2)) *
-      sin(dLon/2)*sin(dLon/2);
+  final a =
+      sin(dLat / 2) * sin(dLat / 2) +
+      cos(_deg2rad(lat1)) * cos(_deg2rad(lat2)) * sin(dLon / 2) * sin(dLon / 2);
   final c = 2 * atan2(sqrt(a), sqrt(1 - a));
   return R * c;
 }
 
 double _deg2rad(double deg) => deg * pi / 180;
-
-
 
 /**
  *  For get trading with saw rating
@@ -132,24 +79,25 @@ Future<List<Destination>> getTrendingDestinations({
   } else if (filter == 'price') {
     destinations.sort((a, b) => a.budget.compareTo(b.budget));
   } else if (filter == 'alam') {
-    destinations = destinations
-        .where(
-          (destination) =>
-              destination.subCategories?.contains('Wisata Alam') ?? false,
-        )
-        .toList();
+    destinations =
+        destinations
+            .where(
+              (destination) =>
+                  destination.subCategories?.contains('Wisata Alam') ?? false,
+            )
+            .toList();
   } else if (filter == 'kota') {
-    destinations = destinations
-        .where(
-          (destination) =>
-              destination.subCategories?.contains('Wisata Kota') ?? false,
-        )
-        .toList();
+    destinations =
+        destinations
+            .where(
+              (destination) =>
+                  destination.subCategories?.contains('Wisata Kota') ?? false,
+            )
+            .toList();
   }
 
   return destinations.where((destination) {
-    final isHighRated =
-        destination.rating != null && destination.rating! > 4.3;
+    final isHighRated = destination.rating != null && destination.rating! > 4.3;
 
     final matchCategory = category == "All" || destination.category == category;
 
@@ -174,4 +122,93 @@ Future<List<String>> getCategoryList() async {
 
   final categoryList = ['All', ...categorySet.toList()..sort()];
   return categoryList;
+}
+
+String _getTimeSegment(int hour) {
+  if (hour >= 0 && hour < 6) return "Dini Hari";
+  if (hour >= 6 && hour < 11) return "Pagi";
+  if (hour >= 11 && hour < 15) return "Siang";
+  if (hour >= 15 && hour < 18) return "Sore";
+  return "Malam";
+}
+
+Future<List<Destination>> getRecommendations({
+  required String category,
+  String? query,
+  String? filter,
+}) async {
+  Position userPosition;
+
+  try {
+    userPosition = await getCurrentUserPosition();
+  } catch (e) {
+    debugPrint('Gagal mendapatkan lokasi pengguna: $e');
+    return [];
+  }
+
+  List<Destination> destinations = await getDestinations();
+
+  // kategori dan query
+  destinations =
+      destinations.where((destination) {
+        final matchCategory =
+            category == "All" || destination.category == category;
+        final matchQuery =
+            query == null ||
+            query.isEmpty ||
+            destination.name!.toLowerCase().contains(query.toLowerCase());
+        return matchCategory && matchQuery;
+      }).toList();
+
+  // Hitung jarak ke user di tipe map
+  final Map<Destination, double> distances = {};
+
+  for (var dest in destinations) {
+    double distance = _calculateDistance(
+      userPosition.latitude,
+      userPosition.longitude,
+      dest.latitude,
+      dest.longitude,
+    );
+
+    distances[dest] = distance;
+
+    debugPrint(
+      'Destinasi: ${dest.name}, Jarak: ${distance.toStringAsFixed(2)} km',
+    );
+  }
+
+  // Filter lainnya
+  if (filter == 'rating') {
+    destinations.sort((a, b) => (b.rating ?? 0).compareTo(a.rating ?? 0));
+  } else if (filter == 'price') {
+    destinations.sort((a, b) => a.budget.compareTo(b.budget));
+  } else if (filter == 'alam') {
+    destinations =
+        destinations
+            .where((d) => d.subCategories?.contains('Wisata Alam') ?? false)
+            .toList();
+  } else if (filter == 'kota') {
+    destinations =
+        destinations
+            .where((d) => d.subCategories?.contains('Wisata Kota') ?? false)
+            .toList();
+  }
+
+  // JARAK MAX
+  final maxDistanceKm = 10.0;
+
+  destinations =
+      destinations
+          .where((d) => (distances[d] ?? double.infinity) <= maxDistanceKm)
+          .toList();
+
+  // sorting jarak terdekat
+  destinations.sort(
+    (a, b) => (distances[a] ?? double.infinity).compareTo(
+      distances[b] ?? double.infinity,
+    ),
+  );
+
+  return destinations;
 }
