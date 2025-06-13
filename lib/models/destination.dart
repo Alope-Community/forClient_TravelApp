@@ -39,7 +39,9 @@ class Destination {
   List<dynamic> images;
   double? rating;
   String description;
-  List<Ulasan>? ulasan; // Perbarui tipe data ulasan
+  List<Ulasan>? ulasan;
+  double latitude;
+  double longitude;
 
   Destination({
     required this.id,
@@ -55,14 +57,21 @@ class Destination {
     required this.rating,
     required this.description,
     required this.ulasan,
+    required this.latitude,
+    required this.longitude,
   });
+
+  String get googleMapsUrl =>
+      'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
 
   factory Destination.fromJson(Map<String, dynamic> json) {
     return Destination(
       id: json['id'] as int,
       name: json['nama'] as String?,
       description: json['description'] as String? ?? '',
-      rating: json['rating'] as double?,
+      rating: json['rating'] is int
+          ? (json['rating'] as int).toDouble()
+          : json['rating'] as double?,
       subCategories: json['subKategori'] != null
           ? List<String?>.from(json['subKategori'])
           : <String?>[],
@@ -74,14 +83,21 @@ class Destination {
           ? Map<String, int>.from(json['aksesibilitas'])
           : null,
       visitingTime: Map<String, dynamic>.from(json['waktu_kunjungan']),
-      recommendedFor: Map<String, dynamic>.from(json['direkomendasikan_untuk']),
+      recommendedFor:
+          Map<String, dynamic>.from(json['direkomendasikan_untuk']),
       location: json['lokasi'] as String,
       images: json['images'] as List<dynamic>,
       ulasan: json['ulasan'] != null
           ? (json['ulasan'] as List)
               .map((ulasanJson) => Ulasan.fromJson(ulasanJson))
               .toList()
-          : null, // Konversi JSON ulasan menjadi List<Ulasan>
+          : null,
+      latitude: json['latitude'] is String
+          ? double.parse(json['latitude'])
+          : json['latitude'] as double,
+      longitude: json['longitude'] is String
+          ? double.parse(json['longitude'])
+          : json['longitude'] as double,
     );
   }
 
@@ -97,7 +113,9 @@ class Destination {
       'direkomendasikan_untuk': recommendedFor,
       'lokasi': location,
       'description': description,
-      'ulasan': ulasan?.map((ulasan) => ulasan.toJson()).toList(), // Konversi List<Ulasan> ke JSON
+      'ulasan': ulasan?.map((ulasan) => ulasan.toJson()).toList(),
+      'latitude': latitude,
+      'longitude': longitude,
     };
   }
 }
